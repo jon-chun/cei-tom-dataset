@@ -1,0 +1,846 @@
+{
+  "by_subtype": {
+    "deflection-misdirection": {
+      "matrix": {
+        "anger": {
+          "anger": 13,
+          "anticipation": 7,
+          "disgust": 8,
+          "fear": 1,
+          "joy": 1,
+          "sadness": 6,
+          "surprise": 18,
+          "trust": 3
+        },
+        "anticipation": {
+          "anger": 7,
+          "anticipation": 2,
+          "disgust": 6,
+          "fear": 0,
+          "joy": 1,
+          "sadness": 1,
+          "surprise": 2,
+          "trust": 11
+        },
+        "disgust": {
+          "anger": 8,
+          "anticipation": 6,
+          "disgust": 1,
+          "fear": 2,
+          "joy": 3,
+          "sadness": 6,
+          "surprise": 9,
+          "trust": 6
+        },
+        "fear": {
+          "anger": 1,
+          "anticipation": 0,
+          "disgust": 2,
+          "fear": 0,
+          "joy": 1,
+          "sadness": 3,
+          "surprise": 5,
+          "trust": 0
+        },
+        "joy": {
+          "anger": 1,
+          "anticipation": 1,
+          "disgust": 3,
+          "fear": 1,
+          "joy": 0,
+          "sadness": 5,
+          "surprise": 2,
+          "trust": 3
+        },
+        "sadness": {
+          "anger": 6,
+          "anticipation": 1,
+          "disgust": 6,
+          "fear": 3,
+          "joy": 5,
+          "sadness": 13,
+          "surprise": 26,
+          "trust": 1
+        },
+        "surprise": {
+          "anger": 18,
+          "anticipation": 2,
+          "disgust": 9,
+          "fear": 5,
+          "joy": 2,
+          "sadness": 26,
+          "surprise": 8,
+          "trust": 4
+        },
+        "trust": {
+          "anger": 3,
+          "anticipation": 11,
+          "disgust": 6,
+          "fear": 0,
+          "joy": 3,
+          "sadness": 1,
+          "surprise": 4,
+          "trust": 2
+        }
+      },
+      "emotions": [
+        "anger",
+        "anticipation",
+        "disgust",
+        "fear",
+        "joy",
+        "sadness",
+        "surprise",
+        "trust"
+      ],
+      "total_pairs": 160,
+      "agreement_count": 39,
+      "agreement_rate": 0.1215,
+      "common_confusions": [
+        {
+          "emotion_1": "sadness",
+          "emotion_2": "surprise",
+          "count": 26
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "surprise",
+          "count": 18
+        },
+        {
+          "emotion_1": "anticipation",
+          "emotion_2": "trust",
+          "count": 11
+        },
+        {
+          "emotion_1": "disgust",
+          "emotion_2": "surprise",
+          "count": 9
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "disgust",
+          "count": 8
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "anticipation",
+          "count": 7
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "sadness",
+          "count": 6
+        },
+        {
+          "emotion_1": "anticipation",
+          "emotion_2": "disgust",
+          "count": 6
+        },
+        {
+          "emotion_1": "disgust",
+          "emotion_2": "sadness",
+          "count": 6
+        },
+        {
+          "emotion_1": "disgust",
+          "emotion_2": "trust",
+          "count": 6
+        }
+      ]
+    },
+    "mixed-signals": {
+      "matrix": {
+        "anger": {
+          "anger": 10,
+          "anticipation": 5,
+          "disgust": 1,
+          "fear": 16,
+          "joy": 4,
+          "sadness": 7,
+          "surprise": 5,
+          "trust": 8
+        },
+        "anticipation": {
+          "anger": 5,
+          "anticipation": 4,
+          "disgust": 0,
+          "fear": 1,
+          "joy": 5,
+          "sadness": 0,
+          "surprise": 4,
+          "trust": 1
+        },
+        "disgust": {
+          "anger": 1,
+          "anticipation": 0,
+          "disgust": 0,
+          "fear": 1,
+          "joy": 0,
+          "sadness": 1,
+          "surprise": 1,
+          "trust": 0
+        },
+        "fear": {
+          "anger": 16,
+          "anticipation": 1,
+          "disgust": 1,
+          "fear": 23,
+          "joy": 2,
+          "sadness": 15,
+          "surprise": 5,
+          "trust": 16
+        },
+        "joy": {
+          "anger": 4,
+          "anticipation": 5,
+          "disgust": 0,
+          "fear": 2,
+          "joy": 2,
+          "sadness": 5,
+          "surprise": 1,
+          "trust": 5
+        },
+        "sadness": {
+          "anger": 7,
+          "anticipation": 0,
+          "disgust": 1,
+          "fear": 15,
+          "joy": 5,
+          "sadness": 13,
+          "surprise": 9,
+          "trust": 3
+        },
+        "surprise": {
+          "anger": 5,
+          "anticipation": 4,
+          "disgust": 1,
+          "fear": 5,
+          "joy": 1,
+          "sadness": 9,
+          "surprise": 1,
+          "trust": 3
+        },
+        "trust": {
+          "anger": 8,
+          "anticipation": 1,
+          "disgust": 0,
+          "fear": 16,
+          "joy": 5,
+          "sadness": 3,
+          "surprise": 3,
+          "trust": 3
+        }
+      },
+      "emotions": [
+        "anger",
+        "anticipation",
+        "disgust",
+        "fear",
+        "joy",
+        "sadness",
+        "surprise",
+        "trust"
+      ],
+      "total_pairs": 152,
+      "agreement_count": 56,
+      "agreement_rate": 0.1842,
+      "common_confusions": [
+        {
+          "emotion_1": "anger",
+          "emotion_2": "fear",
+          "count": 16
+        },
+        {
+          "emotion_1": "fear",
+          "emotion_2": "trust",
+          "count": 16
+        },
+        {
+          "emotion_1": "fear",
+          "emotion_2": "sadness",
+          "count": 15
+        },
+        {
+          "emotion_1": "sadness",
+          "emotion_2": "surprise",
+          "count": 9
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "trust",
+          "count": 8
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "sadness",
+          "count": 7
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "anticipation",
+          "count": 5
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "surprise",
+          "count": 5
+        },
+        {
+          "emotion_1": "anticipation",
+          "emotion_2": "joy",
+          "count": 5
+        },
+        {
+          "emotion_1": "fear",
+          "emotion_2": "surprise",
+          "count": 5
+        }
+      ]
+    },
+    "passive-aggression": {
+      "matrix": {
+        "anger": {
+          "anger": 6,
+          "anticipation": 4,
+          "disgust": 2,
+          "fear": 1,
+          "joy": 1,
+          "sadness": 26,
+          "surprise": 18,
+          "trust": 8
+        },
+        "anticipation": {
+          "anger": 4,
+          "anticipation": 4,
+          "disgust": 0,
+          "fear": 0,
+          "joy": 2,
+          "sadness": 20,
+          "surprise": 9,
+          "trust": 3
+        },
+        "disgust": {
+          "anger": 2,
+          "anticipation": 0,
+          "disgust": 0,
+          "fear": 0,
+          "joy": 0,
+          "sadness": 4,
+          "surprise": 2,
+          "trust": 0
+        },
+        "fear": {
+          "anger": 1,
+          "anticipation": 0,
+          "disgust": 0,
+          "fear": 0,
+          "joy": 0,
+          "sadness": 1,
+          "surprise": 0,
+          "trust": 0
+        },
+        "joy": {
+          "anger": 1,
+          "anticipation": 2,
+          "disgust": 0,
+          "fear": 0,
+          "joy": 4,
+          "sadness": 4,
+          "surprise": 3,
+          "trust": 0
+        },
+        "sadness": {
+          "anger": 26,
+          "anticipation": 20,
+          "disgust": 4,
+          "fear": 1,
+          "joy": 4,
+          "sadness": 8,
+          "surprise": 30,
+          "trust": 11
+        },
+        "surprise": {
+          "anger": 18,
+          "anticipation": 9,
+          "disgust": 2,
+          "fear": 0,
+          "joy": 3,
+          "sadness": 30,
+          "surprise": 6,
+          "trust": 2
+        },
+        "trust": {
+          "anger": 8,
+          "anticipation": 3,
+          "disgust": 0,
+          "fear": 0,
+          "joy": 0,
+          "sadness": 11,
+          "surprise": 2,
+          "trust": 1
+        }
+      },
+      "emotions": [
+        "anger",
+        "anticipation",
+        "disgust",
+        "fear",
+        "joy",
+        "sadness",
+        "surprise",
+        "trust"
+      ],
+      "total_pairs": 165,
+      "agreement_count": 29,
+      "agreement_rate": 0.0876,
+      "common_confusions": [
+        {
+          "emotion_1": "sadness",
+          "emotion_2": "surprise",
+          "count": 30
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "sadness",
+          "count": 26
+        },
+        {
+          "emotion_1": "anticipation",
+          "emotion_2": "sadness",
+          "count": 20
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "surprise",
+          "count": 18
+        },
+        {
+          "emotion_1": "sadness",
+          "emotion_2": "trust",
+          "count": 11
+        },
+        {
+          "emotion_1": "anticipation",
+          "emotion_2": "surprise",
+          "count": 9
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "trust",
+          "count": 8
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "anticipation",
+          "count": 4
+        },
+        {
+          "emotion_1": "disgust",
+          "emotion_2": "sadness",
+          "count": 4
+        },
+        {
+          "emotion_1": "joy",
+          "emotion_2": "sadness",
+          "count": 4
+        }
+      ]
+    },
+    "sarcasm-irony": {
+      "matrix": {
+        "anger": {
+          "anger": 14,
+          "anticipation": 5,
+          "disgust": 3,
+          "fear": 5,
+          "joy": 2,
+          "sadness": 11,
+          "surprise": 9,
+          "trust": 3
+        },
+        "anticipation": {
+          "anger": 5,
+          "anticipation": 1,
+          "disgust": 0,
+          "fear": 2,
+          "joy": 4,
+          "sadness": 5,
+          "surprise": 7,
+          "trust": 1
+        },
+        "disgust": {
+          "anger": 3,
+          "anticipation": 0,
+          "disgust": 1,
+          "fear": 0,
+          "joy": 4,
+          "sadness": 0,
+          "surprise": 1,
+          "trust": 0
+        },
+        "fear": {
+          "anger": 5,
+          "anticipation": 2,
+          "disgust": 0,
+          "fear": 11,
+          "joy": 0,
+          "sadness": 10,
+          "surprise": 9,
+          "trust": 0
+        },
+        "joy": {
+          "anger": 2,
+          "anticipation": 4,
+          "disgust": 4,
+          "fear": 0,
+          "joy": 7,
+          "sadness": 4,
+          "surprise": 10,
+          "trust": 4
+        },
+        "sadness": {
+          "anger": 11,
+          "anticipation": 5,
+          "disgust": 0,
+          "fear": 10,
+          "joy": 4,
+          "sadness": 16,
+          "surprise": 11,
+          "trust": 1
+        },
+        "surprise": {
+          "anger": 9,
+          "anticipation": 7,
+          "disgust": 1,
+          "fear": 9,
+          "joy": 10,
+          "sadness": 11,
+          "surprise": 18,
+          "trust": 1
+        },
+        "trust": {
+          "anger": 3,
+          "anticipation": 1,
+          "disgust": 0,
+          "fear": 0,
+          "joy": 4,
+          "sadness": 1,
+          "surprise": 1,
+          "trust": 0
+        }
+      },
+      "emotions": [
+        "anger",
+        "anticipation",
+        "disgust",
+        "fear",
+        "joy",
+        "sadness",
+        "surprise",
+        "trust"
+      ],
+      "total_pairs": 146,
+      "agreement_count": 68,
+      "agreement_rate": 0.2329,
+      "common_confusions": [
+        {
+          "emotion_1": "anger",
+          "emotion_2": "sadness",
+          "count": 11
+        },
+        {
+          "emotion_1": "sadness",
+          "emotion_2": "surprise",
+          "count": 11
+        },
+        {
+          "emotion_1": "fear",
+          "emotion_2": "sadness",
+          "count": 10
+        },
+        {
+          "emotion_1": "joy",
+          "emotion_2": "surprise",
+          "count": 10
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "surprise",
+          "count": 9
+        },
+        {
+          "emotion_1": "fear",
+          "emotion_2": "surprise",
+          "count": 9
+        },
+        {
+          "emotion_1": "anticipation",
+          "emotion_2": "surprise",
+          "count": 7
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "anticipation",
+          "count": 5
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "fear",
+          "count": 5
+        },
+        {
+          "emotion_1": "anticipation",
+          "emotion_2": "sadness",
+          "count": 5
+        }
+      ]
+    },
+    "strategic-politeness": {
+      "matrix": {
+        "anger": {
+          "anger": 3,
+          "anticipation": 4,
+          "disgust": 1,
+          "fear": 1,
+          "joy": 1,
+          "sadness": 16,
+          "surprise": 7,
+          "trust": 4
+        },
+        "anticipation": {
+          "anger": 4,
+          "anticipation": 2,
+          "disgust": 0,
+          "fear": 0,
+          "joy": 5,
+          "sadness": 13,
+          "surprise": 4,
+          "trust": 6
+        },
+        "disgust": {
+          "anger": 1,
+          "anticipation": 0,
+          "disgust": 0,
+          "fear": 0,
+          "joy": 0,
+          "sadness": 1,
+          "surprise": 0,
+          "trust": 0
+        },
+        "fear": {
+          "anger": 1,
+          "anticipation": 0,
+          "disgust": 0,
+          "fear": 0,
+          "joy": 1,
+          "sadness": 0,
+          "surprise": 1,
+          "trust": 3
+        },
+        "joy": {
+          "anger": 1,
+          "anticipation": 5,
+          "disgust": 0,
+          "fear": 1,
+          "joy": 20,
+          "sadness": 1,
+          "surprise": 2,
+          "trust": 10
+        },
+        "sadness": {
+          "anger": 16,
+          "anticipation": 13,
+          "disgust": 1,
+          "fear": 0,
+          "joy": 1,
+          "sadness": 27,
+          "surprise": 7,
+          "trust": 16
+        },
+        "surprise": {
+          "anger": 7,
+          "anticipation": 4,
+          "disgust": 0,
+          "fear": 1,
+          "joy": 2,
+          "sadness": 7,
+          "surprise": 3,
+          "trust": 13
+        },
+        "trust": {
+          "anger": 4,
+          "anticipation": 6,
+          "disgust": 0,
+          "fear": 3,
+          "joy": 10,
+          "sadness": 16,
+          "surprise": 13,
+          "trust": 8
+        }
+      },
+      "emotions": [
+        "anger",
+        "anticipation",
+        "disgust",
+        "fear",
+        "joy",
+        "sadness",
+        "surprise",
+        "trust"
+      ],
+      "total_pairs": 148,
+      "agreement_count": 63,
+      "agreement_rate": 0.2121,
+      "common_confusions": [
+        {
+          "emotion_1": "anger",
+          "emotion_2": "sadness",
+          "count": 16
+        },
+        {
+          "emotion_1": "sadness",
+          "emotion_2": "trust",
+          "count": 16
+        },
+        {
+          "emotion_1": "anticipation",
+          "emotion_2": "sadness",
+          "count": 13
+        },
+        {
+          "emotion_1": "surprise",
+          "emotion_2": "trust",
+          "count": 13
+        },
+        {
+          "emotion_1": "joy",
+          "emotion_2": "trust",
+          "count": 10
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "surprise",
+          "count": 7
+        },
+        {
+          "emotion_1": "sadness",
+          "emotion_2": "surprise",
+          "count": 7
+        },
+        {
+          "emotion_1": "anticipation",
+          "emotion_2": "trust",
+          "count": 6
+        },
+        {
+          "emotion_1": "anticipation",
+          "emotion_2": "joy",
+          "count": 5
+        },
+        {
+          "emotion_1": "anger",
+          "emotion_2": "anticipation",
+          "count": 4
+        }
+      ]
+    }
+  },
+  "overall": {
+    "matrix": {
+      "anger": {
+        "anger": 46,
+        "anticipation": 25,
+        "disgust": 15,
+        "fear": 24,
+        "joy": 9,
+        "sadness": 66,
+        "surprise": 57,
+        "trust": 26
+      },
+      "anticipation": {
+        "anger": 25,
+        "anticipation": 13,
+        "disgust": 6,
+        "fear": 3,
+        "joy": 17,
+        "sadness": 39,
+        "surprise": 26,
+        "trust": 22
+      },
+      "disgust": {
+        "anger": 15,
+        "anticipation": 6,
+        "disgust": 2,
+        "fear": 3,
+        "joy": 7,
+        "sadness": 12,
+        "surprise": 13,
+        "trust": 6
+      },
+      "fear": {
+        "anger": 24,
+        "anticipation": 3,
+        "disgust": 3,
+        "fear": 34,
+        "joy": 4,
+        "sadness": 29,
+        "surprise": 20,
+        "trust": 19
+      },
+      "joy": {
+        "anger": 9,
+        "anticipation": 17,
+        "disgust": 7,
+        "fear": 4,
+        "joy": 33,
+        "sadness": 19,
+        "surprise": 18,
+        "trust": 22
+      },
+      "sadness": {
+        "anger": 66,
+        "anticipation": 39,
+        "disgust": 12,
+        "fear": 29,
+        "joy": 19,
+        "sadness": 77,
+        "surprise": 83,
+        "trust": 32
+      },
+      "surprise": {
+        "anger": 57,
+        "anticipation": 26,
+        "disgust": 13,
+        "fear": 20,
+        "joy": 18,
+        "sadness": 83,
+        "surprise": 36,
+        "trust": 23
+      },
+      "trust": {
+        "anger": 26,
+        "anticipation": 22,
+        "disgust": 6,
+        "fear": 19,
+        "joy": 22,
+        "sadness": 32,
+        "surprise": 23,
+        "trust": 14
+      }
+    },
+    "emotions": [
+      "anger",
+      "anticipation",
+      "disgust",
+      "fear",
+      "joy",
+      "sadness",
+      "surprise",
+      "trust"
+    ],
+    "total_pairs": 772,
+    "agreement_count": 255,
+    "agreement_rate": 0.165
+  }
+}

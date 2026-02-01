@@ -1,0 +1,484 @@
+[
+  {
+    "annotator_name": "anne_duncan",
+    "subtypes_annotated": [
+      "deflection-misdirection"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 3,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 233.87,
+    "median_lead_time": 233.87,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "deflection-misdirection": {
+        "record_count": 60,
+        "issue_count": 3,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 233.87,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "tiffanie",
+    "subtypes_annotated": [
+      "deflection-misdirection"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 0,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 41.49,
+    "median_lead_time": 41.49,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "deflection-misdirection": {
+        "record_count": 60,
+        "issue_count": 0,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 41.49,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "kirill",
+    "subtypes_annotated": [
+      "deflection-misdirection"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 11,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 29.01,
+    "median_lead_time": 29.01,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "deflection-misdirection": {
+        "record_count": 60,
+        "issue_count": 11,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 29.01,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "anna",
+    "subtypes_annotated": [
+      "mixed-signals"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 11,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 89.67,
+    "median_lead_time": 89.67,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "mixed-signals": {
+        "record_count": 60,
+        "issue_count": 11,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 89.67,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "peter",
+    "subtypes_annotated": [
+      "mixed-signals"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 2,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 56.11,
+    "median_lead_time": 56.11,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "mixed-signals": {
+        "record_count": 60,
+        "issue_count": 2,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 56.11,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "abhigya",
+    "subtypes_annotated": [
+      "mixed-signals"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 47,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 92.29,
+    "median_lead_time": 92.29,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "mixed-signals": {
+        "record_count": 60,
+        "issue_count": 47,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 92.29,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": true,
+    "review_reasons": [
+      "[mixed-signals] High issue rate (78.3%)"
+    ]
+  },
+  {
+    "annotator_name": "eli",
+    "subtypes_annotated": [
+      "passive-aggression"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 7,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 66.22,
+    "median_lead_time": 66.22,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "passive-aggression": {
+        "record_count": 60,
+        "issue_count": 7,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 66.22,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "godwin",
+    "subtypes_annotated": [
+      "passive-aggression"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 3,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 103.63,
+    "median_lead_time": 103.63,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "passive-aggression": {
+        "record_count": 60,
+        "issue_count": 3,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 103.63,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "adrian",
+    "subtypes_annotated": [
+      "passive-aggression"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 3,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 137.15,
+    "median_lead_time": 137.15,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "passive-aggression": {
+        "record_count": 60,
+        "issue_count": 3,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 137.15,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "hannah",
+    "subtypes_annotated": [
+      "sarcasm-irony"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 10,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 94.27,
+    "median_lead_time": 94.27,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "sarcasm-irony": {
+        "record_count": 60,
+        "issue_count": 10,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 94.27,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "andre",
+    "subtypes_annotated": [
+      "sarcasm-irony"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 10,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 87.34,
+    "median_lead_time": 87.34,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "sarcasm-irony": {
+        "record_count": 60,
+        "issue_count": 10,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 87.34,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "gwen",
+    "subtypes_annotated": [
+      "sarcasm-irony"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 3,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 227.31,
+    "median_lead_time": 227.31,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "sarcasm-irony": {
+        "record_count": 60,
+        "issue_count": 3,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 227.31,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "morty",
+    "subtypes_annotated": [
+      "strategic-politeness"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 1,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 55.32,
+    "median_lead_time": 55.32,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "strategic-politeness": {
+        "record_count": 60,
+        "issue_count": 1,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 55.32,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "wisdom",
+    "subtypes_annotated": [
+      "strategic-politeness"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 3,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 64.63,
+    "median_lead_time": 64.63,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "strategic-politeness": {
+        "record_count": 60,
+        "issue_count": 3,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 64.63,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  },
+  {
+    "annotator_name": "mous",
+    "subtypes_annotated": [
+      "strategic-politeness"
+    ],
+    "total_annotations": 60,
+    "mean_quality_score": 1.0,
+    "min_quality_score": 1.0,
+    "std_quality_score": 0.0,
+    "total_issues": 3,
+    "critical_issues": 0,
+    "major_issues": 0,
+    "mean_lead_time": 157.62,
+    "median_lead_time": 157.62,
+    "lead_time_mad": 0.0,
+    "dwell_outlier_count": 0,
+    "dwell_outlier_rate": 0.0,
+    "straight_lining_detected": false,
+    "self_contradictions": 0,
+    "is_cohort_outlier": false,
+    "by_subtype": {
+      "strategic-politeness": {
+        "record_count": 60,
+        "issue_count": 3,
+        "mean_quality_score": 1.0,
+        "mean_lead_time": 157.62,
+        "suspicious_fast_count": 0
+      }
+    },
+    "needs_full_review": false,
+    "review_reasons": []
+  }
+]

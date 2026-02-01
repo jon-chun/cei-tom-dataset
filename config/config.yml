@@ -1,0 +1,418 @@
+# CEI Quality Pipeline Configuration
+# See documentation for all options
+
+project:
+  name: "My CEI Project"
+  version: "2.0.0"
+
+# =============================================================================
+# PIPELINE CONFIGURATION
+# =============================================================================
+pipeline:
+  # Pipeline type: 'facct26' (FAccT 2026) or 'icml26' (ICML 2026)
+  type: "icml26"
+
+  # Execution mode: 'full', 'stage:<name>', 'from:<name>', 'to:<name>', 'range:<start>:<end>'
+  mode: "full"
+
+  # Global pipeline settings
+  dry_run: false
+  verbose: true
+  checkpoint_enabled: true
+
+  # API call limits and retry configuration
+  api_limits:
+    api_model_max_ct: 4000      # Max calls per model
+    api_total_max_ct: 15000     # Max total calls
+    api_retry_max: 3            # Max retry attempts
+    backoff_base_seconds: 2.0   # Initial backoff delay
+    backoff_max_seconds: 60.0   # Maximum backoff delay
+    jitter_factor: 0.25         # Random jitter (±25%)
+
+  # Stage-specific configuration
+  stages:
+    config_test:
+      enabled: true
+      test_call_count: 3
+      timeout_seconds: 30
+
+    pilot_test:
+      enabled: true
+      sample_fraction: 0.10
+      stratify_by: ["subtype", "power_relation"]
+      min_per_stratum: 2
+      auto_proceed_threshold: 0.95
+
+    main_inference:
+      enabled: true
+      batch_size: 50
+      parallel_models: 3
+      retry_count: 3
+      retry_delay_seconds: 5
+      checkpoint_interval: 100
+      resume_from_checkpoint: true
+      use_openai_batch_api: true
+
+    supplementary_inference:
+      enabled: true
+      experiments: []
+
+    data_qa:
+      enabled: true
+      error_threshold_percent: 5.0
+      anomaly_z_threshold: 3.0
+      generate_retry_plan: true
+      max_retry_fraction: 0.10
+
+    fix_data:
+      enabled: true
+      max_fix_iterations: 3
+      discard_threshold_percent: 2.0
+      exponential_backoff: true
+
+    transform_data:
+      enabled: true
+      output_formats: ["csv", "parquet"]
+      include_derived_columns: true
+      normalize_vad: true
+
+    analyze_data:
+      enabled: true
+      bootstrap_resamples: 10000
+      significance_level: 0.05
+      correction_method: "bonferroni"
+
+    visualize_data:
+      enabled: true
+      dpi: 300
+      formats: ["png", "pdf"]
+      style: "paper"
+      colormap: "viridis"
+      generate_latex: true
+
+# =============================================================================
+# FACCT 2026 CONFIGURATION
+# =============================================================================
+facct26:
+  # Model ensemble (v2 reduced)
+  models:
+    us_commercial:
+      - "gpt-5-mini"
+      - "claude-haiku-4-5"
+      - "gemini-3-flash"
+      - "grok-4-1-fast"
+    cn_commercial:
+      - "qwen3-235b-instruct"
+      - "deepseek-v3"
+      - "minimax-m2"
+      - "glm-4p6"
+    oss_local:
+      - "llama-3.2-3b"
+      - "phi-4-mini"
+
+  # Demographic groups (v2 reduced)
+  demographics:
+    - name: "white_male"
+      names: ["John", "Michael", "David", "James", "Robert"]
+    - name: "black_female"
+      names: ["Lakisha", "Tamika", "Keisha", "Latoya", "Shaniqua"]
+    - name: "asian"
+      names: ["Wei", "Priya", "Hiroshi", "Mei", "Raj"]
+    - name: "hispanic"
+      names: ["Carlos", "Maria", "José", "Elena", "Miguel"]
+
+  # Case studies
+  case_studies:
+    - "hr_triage"
+    - "workplace_monitoring"
+
+  # RQ configuration
+  rqs:
+    rq1_power_stratified:
+      enabled: true
+      power_relations: ["peer", "higher_to_lower", "lower_to_higher"]
+    rq2_demographic:
+      enabled: true
+      demographics: ["white_male", "black_female", "asian", "hispanic"]
+    rq3_deployment:
+      enabled: false
+
+# =============================================================================
+# ICML 2026 CONFIGURATION
+# =============================================================================
+icml26:
+  # Probing models (local GPU)
+  probing_models:
+    - model_id: "llama-3-8b"
+      layers: 32
+      hidden_dim: 4096
+    - model_id: "mistral-7b"
+      layers: 32
+      hidden_dim: 4096
+    - model_id: "flan-t5-xxl"
+      layers: 24
+      hidden_dim: 4096
+    - model_id: "mixtral-8x22b"
+      layers: 56
+      hidden_dim: 6144
+      optional: true
+
+  # API models for evaluation (7 paid)
+  api_models:
+    paid:
+      - "gpt-5-mini"
+      - "claude-haiku-4-5"
+      - "grok-4-1-fast"
+      - "qwen3-235b-instruct"
+      - "deepseek-v3"
+      - "minimax-m2"
+      - "glm-4p6"
+    oss:
+      - "llama-3.2-3b"
+      - "phi-4-mini"
+      - "gemma-3-4b"
+      - "mistral-3-8b"
+
+  # Features to probe
+  probed_features:
+    - "subtype"
+    - "speaker_power"
+    - "power_direction"
+    - "domain"
+    - "emotion"
+    - "valence"
+
+  # Interventions (v2 reduced)
+  interventions:
+    - id: "INT-2"
+      name: "perspective_taking"
+      enabled: true
+    - id: "INT-3"
+      name: "subtype_awareness"
+      enabled: true
+    - id: "INT-5"
+      name: "counterfactual"
+      enabled: true
+
+  # Compositionality config
+  compositionality:
+    same_subtype_count: 500
+    cross_subtype_count: 300
+    role_swap_count: 100
+    coherence_threshold: 0.3
+
+  # RQ configuration
+  rqs:
+    rq1_probing:
+      enabled: true
+      local_only: true
+    rq2_compositionality:
+      enabled: true
+    rq3_interventions:
+      enabled: true
+
+# =============================================================================
+# PATHS CONFIGURATION
+# =============================================================================
+paths:
+  # Human annotation data (source of truth)
+  human_data_dir: "data-human/gold"
+  human_analysis_dir: "data-human-analysis/quality"
+
+  # FAccT 2026 LLM experiment data
+  facct_llm_dir: "data-facct-llm"
+  facct_llm_analysis_dir: "data-facct-llm-analysis"
+
+  # ICML 2026 LLM experiment data (separate paper)
+  icml_llm_dir: "data-icml-llm"
+  icml_llm_analysis_dir: "data-icml-llm-analysis"
+
+  # Legacy paths (for backward compatibility with CEI quality pipeline)
+  data_dir: "data-human/gold"
+  output_dir: "data-human-analysis/quality"
+
+  # Common paths
+  reports_dir: "reports"
+  logs_dir: "logs"
+  models_dir: "models"
+  cache_dir: "data/response_cache"
+  side_studies_dir: "side-studies/facct2026"
+
+schema:
+  scenarios_per_subtype: 60
+  annotators_per_subtype: 3
+
+# Quality thresholds for differentiation
+thresholds:
+  min_lead_time_seconds: 5.0
+  impossibly_fast_seconds: 3.0
+  unusually_slow_seconds: 600.0
+  dwell_time_outlier_z: 2.0
+  fleiss_kappa_warning: 0.3
+  fleiss_kappa_acceptable: 0.4
+  fleiss_kappa_good: 0.6
+  mandatory_review_score: 0.80
+  flag_review_score: 0.90
+
+# Human review settings
+review:
+  show_all_annotators: true
+  max_review_items: 100
+  priority_critical: 90
+  priority_high: 70
+  priority_medium: 50
+
+logging:
+  level: "INFO"
+  rich_console: true
+
+llm:
+  enabled: false
+  provider: "openai"
+  model: "gpt-5-mini"
+
+pricing_usd_per_1m_tokens:
+  openai:
+    gpt-5-mini: {input: 0.25, output: 2.00}
+    gpt-5-1: {input: 1.25, output: 10.00}
+    gpt-5-2: {input: 1.75, output: 14.00}
+    _default: {input: 1.25, output: 10.00}
+  anthropic:
+    claude-haiku-4-5: {input: 1.00, output: 5.00}
+    claude-sonnet-4-5: {input: 3.00, output: 15.00}
+    _default: {input: 3.00, output: 15.00}
+  google:
+    gemini-3-flash-preview: {input: 0.50, output: 3.00}
+    gemini-3-pro-preview: {input: 2.00, output: 12.00}
+    _default: {input: 2.00, output: 12.00}
+  xai:
+    grok-4-1-fast-non-reasoning: {input: 0.20, output: 0.50}
+    grok-4-1-fast-reasoning: {input: 0.20, output: 0.50}
+    _default: {input: 0.20, output: 0.50}
+  fireworks:
+    deepseek-v3p2: {input: 0.56, output: 1.68}
+    kimi-k2-instruct-0905: {input: 0.60, output: 2.50}
+    kimi-k2-thinking: {input: 0.60, output: 2.50}
+    qwen3-235b-a22b-thinking-2507: {input: 0.22, output: 0.88}
+    qwen3-vl-235b-a22b-instruct: {input: 0.22, output: 0.88}
+    glm-4p6: {input: 0.55, output: 2.19}
+    glm-4p7: {input: 0.60, output: 2.20}
+    minimax-m2: {input: 0.30, output: 1.20}
+    minimax-m2p1: {input: 0.30, output: 1.20}
+    _default: {input: 1.00, output: 5.00}
+  together:
+    meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo: {input: 0.18, output: 0.18}
+    mistralai/Mistral-Small-24B-Instruct-2501: {input: 0.10, output: 0.30}
+    _default: {input: 0.15, output: 0.60}
+  ollama:
+    _default: {input: 0.0, output: 0.0}
+
+# Valid label values for each dimension (with numeric mappings for VAD)
+valid_labels:
+  plutchik_emotions:
+    - joy
+    - trust
+    - fear
+    - surprise
+    - sadness
+    - disgust
+    - anger
+    - anticipation
+  valence:
+    - value: "very pleasant"
+      numeric: 1.0
+    - value: "pleasant"
+      numeric: 0.67
+    - value: "slightly pleasant"
+      numeric: 0.33
+    - value: "neutral"
+      numeric: 0.0
+    - value: "slightly unpleasant"
+      numeric: -0.33
+    - value: "unpleasant"
+      numeric: -0.67
+    - value: "very unpleasant"
+      numeric: -1.0
+  arousal:
+    - value: "very excited"
+      numeric: 1.0
+    - value: "excited"
+      numeric: 0.67
+    - value: "slightly excited"
+      numeric: 0.33
+    - value: "neutral"
+      numeric: 0.0
+    - value: "slightly calm"
+      numeric: -0.33
+    - value: "calm"
+      numeric: -0.67
+    - value: "very calm"
+      numeric: -1.0
+  dominance:
+    - value: "very in control"
+      numeric: 1.0
+    - value: "in control"
+      numeric: 0.67
+    - value: "slightly in control"
+      numeric: 0.33
+    - value: "neutral"
+      numeric: 0.0
+    - value: "slightly controlled"
+      numeric: -0.33
+    - value: "controlled"
+      numeric: -0.67
+    - value: "very controlled"
+      numeric: -1.0
+  confidence:
+    - value: "very confident"
+      numeric: 1.0
+    - value: "confident"
+      numeric: 0.67
+    - value: "mildly confident"
+      numeric: 0.33
+    - value: "neutral"
+      numeric: 0.0
+    - value: "mildly uncertain"
+      numeric: -0.33
+    - value: "uncertain"
+      numeric: -0.67
+    - value: "very uncertain"
+      numeric: -1.0
+
+# Expected VAD ranges for each Plutchik emotion
+emotion_vad_profiles:
+  joy:
+    valence: [0.3, 1.0]
+    arousal: [-0.3, 0.7]
+    dominance: [0.0, 1.0]
+  trust:
+    valence: [0.0, 0.8]
+    arousal: [-0.6, 0.3]
+    dominance: [-0.3, 0.6]
+  fear:
+    valence: [-1.0, -0.2]
+    arousal: [0.2, 1.0]
+    dominance: [-1.0, -0.1]
+  surprise:
+    valence: [-0.5, 0.7]
+    arousal: [0.3, 1.0]
+    dominance: [-0.6, 0.4]
+  sadness:
+    valence: [-1.0, -0.2]
+    arousal: [-1.0, 0.0]
+    dominance: [-1.0, -0.1]
+  disgust:
+    valence: [-1.0, -0.3]
+    arousal: [-0.3, 0.6]
+    dominance: [0.0, 0.8]
+  anger:
+    valence: [-1.0, -0.3]
+    arousal: [0.3, 1.0]
+    dominance: [0.2, 1.0]
+  anticipation:
+    valence: [0.0, 0.7]
+    arousal: [0.0, 0.7]
+    dominance: [-0.2, 0.6]
+
+quality:
+  vad_tolerance: 0.3

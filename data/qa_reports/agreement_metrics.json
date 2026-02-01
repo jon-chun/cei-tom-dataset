@@ -1,0 +1,83 @@
+{
+  "fleiss_kappa": {
+    "by_subtype": {
+      "deflection-misdirection": 0.0625,
+      "mixed-signals": 0.16209925670095346,
+      "passive-aggression": -0.056436567164179094,
+      "sarcasm-irony": 0.25172592977507235,
+      "strategic-politeness": 0.19905681904617015
+    },
+    "overall": 0.12378908767160338
+  },
+  "fleiss_kappa_with_ci": {
+    "deflection-misdirection": {
+      "kappa": 0.0625,
+      "ci_lower": -0.0094,
+      "ci_upper": 0.117,
+      "se": 0.0318,
+      "n_bootstrap": 1000
+    },
+    "mixed-signals": {
+      "kappa": 0.16209925670095346,
+      "ci_lower": 0.0913,
+      "ci_upper": 0.2209,
+      "se": 0.0336,
+      "n_bootstrap": 1000
+    },
+    "passive-aggression": {
+      "kappa": -0.056436567164179094,
+      "ci_lower": -0.1265,
+      "ci_upper": -0.0018,
+      "se": 0.0332,
+      "n_bootstrap": 1000
+    },
+    "sarcasm-irony": {
+      "kappa": 0.25172592977507235,
+      "ci_lower": 0.1715,
+      "ci_upper": 0.3245,
+      "se": 0.0395,
+      "n_bootstrap": 1000
+    },
+    "strategic-politeness": {
+      "kappa": 0.19905681904617015,
+      "ci_lower": 0.1208,
+      "ci_upper": 0.2669,
+      "se": 0.038,
+      "n_bootstrap": 1000
+    }
+  },
+  "weighted_kappa_vad": {
+    "deflection-misdirection": {
+      "valence": 0.26359512696156906,
+      "arousal": 0.13077094469890763,
+      "dominance": 0.0346610861253042
+    },
+    "mixed-signals": {
+      "valence": 0.09023022867819745,
+      "arousal": 0.1619817519795154,
+      "dominance": 0.17048940624562814
+    },
+    "passive-aggression": {
+      "valence": 0.32574511266416767,
+      "arousal": 0.02273377060828094,
+      "dominance": 0.004016613083165911
+    },
+    "sarcasm-irony": {
+      "valence": 0.4798568193802537,
+      "arousal": 0.15617384239442736,
+      "dominance": 0.21479958364934884
+    },
+    "strategic-politeness": {
+      "valence": 0.4216637131035947,
+      "arousal": 0.03918857649921421,
+      "dominance": -0.018117021431203306
+    }
+  },
+  "interpretation": {
+    "deflection-misdirection": "slight",
+    "mixed-signals": "slight",
+    "passive-aggression": "poor (worse than chance)",
+    "sarcasm-irony": "fair",
+    "strategic-politeness": "slight"
+  }
+}

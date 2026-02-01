@@ -1,0 +1,22 @@
+{
+  "by_stage": {
+    "1A_schema": 0,
+    "1B_consistency": 87,
+    "1C_agreement": 50,
+    "1D_plausibility": 94
+  },
+  "by_severity": {
+    "critical": 0,
+    "major": 94,
+    "minor": 128,
+    "info": 9
+  },
+  "by_flag": {
+    "1B_suspicious_lead_time": 9,
+    "1B_dwell_time_outlier": 49,
+    "1C_high_vad_disagreement": 28,
+    "1D_vad_emotion_mismatch": 94,
+    "1B_invalid_label_value": 29,
+    "1C_no_majority_emotion": 22
+  }
+}

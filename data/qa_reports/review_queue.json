@@ -1,0 +1,1522 @@
+[
+  {
+    "rank": 1,
+    "scenario_id": 15,
+    "subtype": "passive-aggression",
+    "quality_score": 0.595,
+    "priority": 9,
+    "reasons": [
+      "5 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: A junior developer is responding to their manager after being asked to handle another round of weekend QA. The junior has been given disproportionate weekend work compared with more senior colleagues over several cycles.\nSpeaker (junior developer) \u2192 Listener (engineering manager):\n\"Sure, I'll take care of the extra QA this weekend, don't worry about me; I know you have more important things to do.\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "sadness",
+        "trust"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "unpleasant",
+        "mildly pleasant"
+      ],
+      "arousal": [
+        "neutral",
+        "slightly calm",
+        "neutral"
+      ],
+      "dominance": [
+        "very controlled",
+        "slightly controlled",
+        "slightly in control"
+      ],
+      "confidence": [
+        "mildly unsure",
+        "mildly confident",
+        "confident"
+      ],
+      "annotators": [
+        "eli",
+        "godwin",
+        "adrian"
+      ]
+    }
+  },
+  {
+    "rank": 2,
+    "scenario_id": 33,
+    "subtype": "mixed-signals",
+    "quality_score": 0.645,
+    "priority": 9,
+    "reasons": [
+      "4 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: A 23-year-old adult child texts their parent at 2:15 AM after a rough day at work. The parent often responds quickly when worried but has also been short tempered lately, claiming to be exhausted from extra shifts.\nSpeaker (mother) \u2192 Listener (adult child):\n\"You're doing fine, just call me if you need anything.\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "trust",
+        "sadness"
+      ],
+      "valence": [
+        "neutral",
+        "mildly pleasant",
+        "very unpleasant"
+      ],
+      "arousal": [
+        "slightly excited",
+        "neutral",
+        "calm"
+      ],
+      "dominance": [
+        "slightly in control",
+        "neutral",
+        "controlled"
+      ],
+      "confidence": [
+        "unsure",
+        "mildly confident",
+        "unsure"
+      ],
+      "annotators": [
+        "anna",
+        "peter",
+        "abhigya"
+      ]
+    }
+  },
+  {
+    "rank": 3,
+    "scenario_id": 57,
+    "subtype": "passive-aggression",
+    "quality_score": 0.685,
+    "priority": 9,
+    "reasons": [
+      "3 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: In a team Slack channel for a peer software project. A teammate who has missed several deadlines just posted a late-but-working patch fix and a short summary of what they changed.\nSpeaker (you) \u2192 Listener (teammate  ):\n\"Nice, it actually works. \"",
+    "annotations": {
+      "emotions": [
+        "anger",
+        "sadness",
+        "disgust"
+      ],
+      "valence": [
+        "unpleasant",
+        "unpleasant",
+        "unpleasant"
+      ],
+      "arousal": [
+        "neutral",
+        "calm",
+        "excited"
+      ],
+      "dominance": [
+        "neutral",
+        "slightly controlled",
+        "neutral"
+      ],
+      "confidence": [
+        "confident",
+        "neutral",
+        "confident"
+      ],
+      "annotators": [
+        "eli",
+        "godwin",
+        "adrian"
+      ]
+    }
+  },
+  {
+    "rank": 4,
+    "scenario_id": 18,
+    "subtype": "passive-aggression",
+    "quality_score": 0.696,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: You and your sibling usually trade cooking and chores. Lately they cancel plans and expect you to cover evenings. Tonight they say they need to head out with friends right before dinner.\nSpeaker (You) \u2192 Listener (younger sibling):\n\"Oh, it's fine go ahead and go; I can make dinner again, don't worry about me.\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "sadness",
+        "joy"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "unpleasant",
+        "neutral"
+      ],
+      "arousal": [
+        "neutral",
+        "slightly calm",
+        "calm"
+      ],
+      "dominance": [
+        "slightly in control",
+        "controlled",
+        "slightly controlled"
+      ],
+      "confidence": [
+        "mildly confident",
+        "confident",
+        "confident"
+      ],
+      "annotators": [
+        "eli",
+        "godwin",
+        "adrian"
+      ]
+    }
+  },
+  {
+    "rank": 5,
+    "scenario_id": 21,
+    "subtype": "passive-aggression",
+    "quality_score": 0.696,
+    "priority": 9,
+    "reasons": [
+      "3 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: Two adult siblings coordinate driving their elderly parent to a mid-morning medical appointment. The younger sibling texts that they'll be a bit late because of work, and the older sibling, who has done most of the rides lately, replies immediately.\nSpeaker (older sibling) \u2192 Listener (younger sibling):\n\"Oh, that's fine take as long as you need. I\u2019ve got all the time in the world like always.\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "sadness",
+        "disgust"
+      ],
+      "valence": [
+        "unpleasant",
+        "unpleasant",
+        "pleasant"
+      ],
+      "arousal": [
+        "slightly calm",
+        "neutral",
+        "calm"
+      ],
+      "dominance": [
+        "slightly controlled",
+        "controlled",
+        "very in control"
+      ],
+      "confidence": [
+        "mildly unsure",
+        "confident",
+        "confident"
+      ],
+      "annotators": [
+        "eli",
+        "godwin",
+        "adrian"
+      ]
+    }
+  },
+  {
+    "rank": 6,
+    "scenario_id": 39,
+    "subtype": "passive-aggression",
+    "quality_score": 0.696,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: You lent a favorite jacket to a close friend for a concert; they returned it with a faint wine stain and the sleeve a bit stretched. This isn't the first time they've been careless with your things, and you haven't directly complained before.\nSpeaker (you) \u2192 Listener (friend):\n\"Thanks for bringing my jacket back, its almost like new.\"",
+    "annotations": {
+      "emotions": [
+        "anticipation",
+        "sadness",
+        "surprise"
+      ],
+      "valence": [
+        "unpleasant",
+        "unpleasant",
+        "mildly unpleasant"
+      ],
+      "arousal": [
+        "slightly calm",
+        "slightly calm",
+        "slightly excited"
+      ],
+      "dominance": [
+        "neutral",
+        "slightly controlled",
+        "very controlled"
+      ],
+      "confidence": [
+        "neutral",
+        "mildly confident",
+        "confident"
+      ],
+      "annotators": [
+        "eli",
+        "godwin",
+        "adrian"
+      ]
+    }
+  },
+  {
+    "rank": 7,
+    "scenario_id": 47,
+    "subtype": "passive-aggression",
+    "quality_score": 0.706,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: You have often been the one to rearrange plans with your old friend group when a newer member joins and tends to cancel last minute. After the new friend cancels again citing 'unexpected work stuff,' you message them while organizing the week.\nSpeaker (you) \u2192 Listener (new friend):\n\"No problem at all. Text me when you're free next and I'll find a time that works for you.\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "sadness",
+        "joy"
+      ],
+      "valence": [
+        "unpleasant",
+        "unpleasant",
+        "pleasant"
+      ],
+      "arousal": [
+        "slightly calm",
+        "slightly calm",
+        "neutral"
+      ],
+      "dominance": [
+        "neutral",
+        "controlled",
+        "in control"
+      ],
+      "confidence": [
+        "confident",
+        "mildly unsure",
+        "very confident"
+      ],
+      "annotators": [
+        "eli",
+        "godwin",
+        "adrian"
+      ]
+    }
+  },
+  {
+    "rank": 8,
+    "scenario_id": 42,
+    "subtype": "deflection-misdirection",
+    "quality_score": 0.706,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: At a cafe, a younger friend asks their older friend if the younger friend is still seeing the person they'd been dating a few months ago, after rumors at a mutual friend's party.\nSpeaker (older_friend) \u2192 Listener (younger_friend):\n\"Still seeing them? Like you're seeing your partner? BTW, hows that going?\"",
+    "annotations": {
+      "emotions": [
+        "anticipation",
+        "sadness",
+        "surprise"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "mildly unpleasant",
+        "unpleasant"
+      ],
+      "arousal": [
+        "neutral",
+        "slightly excited",
+        "neutral"
+      ],
+      "dominance": [
+        "slightly in control",
+        "slightly controlled",
+        "neutral"
+      ],
+      "confidence": [
+        "neutral",
+        "confident",
+        "unsure"
+      ],
+      "annotators": [
+        "anne_duncan",
+        "tiffanie",
+        "kirill"
+      ]
+    }
+  },
+  {
+    "rank": 9,
+    "scenario_id": 43,
+    "subtype": "strategic-politeness",
+    "quality_score": 0.706,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: A friend who usually makes last-minute plans is telling you they can't keep accommodating you after repeated cancellations.\nSpeaker (you) \u2192 Listener (friend):\n\"I apologize my schedule is so rigid and requires a little bit more planning.\"",
+    "annotations": {
+      "emotions": [
+        "sadness",
+        "disgust",
+        "anger"
+      ],
+      "valence": [
+        "neutral",
+        "mildly unpleasant",
+        "mildly unpleasant"
+      ],
+      "arousal": [
+        "neutral",
+        "neutral",
+        "slightly excited"
+      ],
+      "dominance": [
+        "very controlled",
+        "controlled",
+        "slightly controlled"
+      ],
+      "confidence": [
+        "neutral",
+        "mildly confident",
+        "neutral"
+      ],
+      "annotators": [
+        "morty",
+        "wisdom",
+        "mous"
+      ]
+    }
+  },
+  {
+    "rank": 10,
+    "scenario_id": 52,
+    "subtype": "passive-aggression",
+    "quality_score": 0.706,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: You and a friend had plans to go out. Your friend (who usually calls the shots socially) cancels last minute yet again. You respond when they apologize.\nSpeaker (you) \u2192 Listener (friend):\n\"It's fine, don't worry about it. I'm happy to stay in again.\"",
+    "annotations": {
+      "emotions": [
+        "anticipation",
+        "sadness",
+        "trust"
+      ],
+      "valence": [
+        "unpleasant",
+        "mildly unpleasant",
+        "mildly pleasant"
+      ],
+      "arousal": [
+        "slightly calm",
+        "slightly calm",
+        "neutral"
+      ],
+      "dominance": [
+        "slightly controlled",
+        "slightly controlled",
+        "in control"
+      ],
+      "confidence": [
+        "confident",
+        "neutral",
+        "confident"
+      ],
+      "annotators": [
+        "eli",
+        "godwin",
+        "adrian"
+      ]
+    }
+  },
+  {
+    "rank": 11,
+    "scenario_id": 36,
+    "subtype": "deflection-misdirection",
+    "quality_score": 0.706,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: On a second date, the conversation turns serious when the woman asks her partner whether they should be exclusive.\nSpeaker (partner) \u2192 Listener (woman):\n\"You bet, as serious as a heart attack!\"",
+    "annotations": {
+      "emotions": [
+        "disgust",
+        "sadness",
+        "surprise"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "unpleasant",
+        "mildly pleasant"
+      ],
+      "arousal": [
+        "slightly excited",
+        "excited",
+        "excited"
+      ],
+      "dominance": [
+        "controlled",
+        "controlled",
+        "slightly in control"
+      ],
+      "confidence": [
+        "confident",
+        "confident",
+        "neutral"
+      ],
+      "annotators": [
+        "anne_duncan",
+        "tiffanie",
+        "kirill"
+      ]
+    }
+  },
+  {
+    "rank": 12,
+    "scenario_id": 37,
+    "subtype": "deflection-misdirection",
+    "quality_score": 0.706,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: A professor asks why their colleague skipped an important event they were expected to attend together.\nSpeaker (colleague) \u2192 Listener (professor):\n\"I wouldn't say 'skipped' so much as 'jumped' - know what I mean?\"",
+    "annotations": {
+      "emotions": [
+        "anticipation",
+        "anger",
+        "disgust"
+      ],
+      "valence": [
+        "unpleasant",
+        "unpleasant",
+        "unpleasant"
+      ],
+      "arousal": [
+        "neutral",
+        "slightly excited",
+        "slightly excited"
+      ],
+      "dominance": [
+        "controlled",
+        "slightly in control",
+        "neutral"
+      ],
+      "confidence": [
+        "mildly confident",
+        "confident",
+        "mildly confident"
+      ],
+      "annotators": [
+        "anne_duncan",
+        "tiffanie",
+        "kirill"
+      ]
+    }
+  },
+  {
+    "rank": 13,
+    "scenario_id": 51,
+    "subtype": "mixed-signals",
+    "quality_score": 0.726,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: You've been checking in with a friend all week about their horrible dating experiences. They text you late one night after a terrible date. You've offered help before but have started to feel worn out by repeating yourself.\nSpeaker (you) \u2192 Listener (friend):\n\"Can't talk right now. Check my previous text advice. And don't go changing for anyone.\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "anger",
+        "sadness"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "mildly unpleasant",
+        "very unpleasant"
+      ],
+      "arousal": [
+        "slightly excited",
+        "slightly excited",
+        "calm"
+      ],
+      "dominance": [
+        "slightly in control",
+        "neutral",
+        "controlled"
+      ],
+      "confidence": [
+        "neutral",
+        "confident",
+        "unsure"
+      ],
+      "annotators": [
+        "anna",
+        "peter",
+        "abhigya"
+      ]
+    }
+  },
+  {
+    "rank": 14,
+    "scenario_id": 28,
+    "subtype": "strategic-politeness",
+    "quality_score": 0.726,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: A father is responding to his adult child who just told him they didn't get a promotion they interviewed for; they're speaking over the phone.\nSpeaker (father) \u2192 Listener (adult child):\n\"This one probably wasn't the right fit, but I'm proud of how you put yourself out there.\"",
+    "annotations": {
+      "emotions": [
+        "joy",
+        "trust",
+        "sadness"
+      ],
+      "valence": [
+        "neutral",
+        "pleasant",
+        "unpleasant"
+      ],
+      "arousal": [
+        "neutral",
+        "slightly calm",
+        "slightly calm"
+      ],
+      "dominance": [
+        "neutral",
+        "neutral",
+        "slightly controlled"
+      ],
+      "confidence": [
+        "mildly confident",
+        "confident",
+        "mildly confident"
+      ],
+      "annotators": [
+        "morty",
+        "wisdom",
+        "mous"
+      ]
+    }
+  },
+  {
+    "rank": 15,
+    "scenario_id": 21,
+    "subtype": "deflection-misdirection",
+    "quality_score": 0.726,
+    "priority": 9,
+    "reasons": [
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: At a quiet family dinner, your younger sibling asks if you told Mom and Dad about losing your job earlier this month.\nSpeaker (older sibling) \u2192 Listener (younger sibling):\n\"Oh wow\u00e2 remember when Dad burned the Thanksgiving turkey and we all pretended it was 'extra crispy'?\"",
+    "annotations": {
+      "emotions": [
+        "disgust",
+        "sadness",
+        "fear"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "mildly unpleasant",
+        "mildly pleasant"
+      ],
+      "arousal": [
+        "calm",
+        "calm",
+        "slightly excited"
+      ],
+      "dominance": [
+        "controlled",
+        "controlled",
+        "in control"
+      ],
+      "confidence": [
+        "mildly confident",
+        "very confident",
+        "mildly confident"
+      ],
+      "annotators": [
+        "anne_duncan",
+        "tiffanie",
+        "kirill"
+      ]
+    }
+  },
+  {
+    "rank": 16,
+    "scenario_id": 46,
+    "subtype": "deflection-misdirection",
+    "quality_score": 0.726,
+    "priority": 9,
+    "reasons": [
+      "2 major issues",
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: After their first date the younger partner texts that they felt hurt the older man didn't call the next day; the older partner (more socially experienced) replies in a bright, planning tone.\nSpeaker (more experienced man) \u2192 Listener (less experienced partner):\n\"I'm so terrible with my phone lately, but you know what they say \"bigger plans take more time.\"\"",
+    "annotations": {
+      "emotions": [
+        "anticipation",
+        "trust",
+        "joy"
+      ],
+      "valence": [
+        "mildly pleasant",
+        "mildly pleasant",
+        "very pleasant"
+      ],
+      "arousal": [
+        "neutral",
+        "neutral",
+        "excited"
+      ],
+      "dominance": [
+        "in control",
+        "slightly controlled",
+        "very in control"
+      ],
+      "confidence": [
+        "mildly confident",
+        "very confident",
+        "very confident"
+      ],
+      "annotators": [
+        "anne_duncan",
+        "tiffanie",
+        "kirill"
+      ]
+    }
+  },
+  {
+    "rank": 17,
+    "scenario_id": 21,
+    "subtype": "strategic-politeness",
+    "quality_score": 0.746,
+    "priority": 9,
+    "reasons": [
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: You share a small apartment with a friend. Your roommate has been late doing dishes and leaving food on the counter for several days. After a long shift you come home to another mess and speak up.\nSpeaker (you) \u2192 Listener (roommate):\n\"Hey, I know you've been swamped lately. Thanks for picking up last week, but  could you try to stay on top of the dishes this week? \"",
+    "annotations": {
+      "emotions": [
+        "anger",
+        "sadness",
+        "anticipation"
+      ],
+      "valence": [
+        "neutral",
+        "mildly unpleasant",
+        "neutral"
+      ],
+      "arousal": [
+        "slightly calm",
+        "neutral",
+        "neutral"
+      ],
+      "dominance": [
+        "slightly in control",
+        "in control",
+        "neutral"
+      ],
+      "confidence": [
+        "mildly confident",
+        "confident",
+        "neutral"
+      ],
+      "annotators": [
+        "morty",
+        "wisdom",
+        "mous"
+      ]
+    }
+  },
+  {
+    "rank": 18,
+    "scenario_id": 40,
+    "subtype": "passive-aggression",
+    "quality_score": 0.746,
+    "priority": 9,
+    "reasons": [
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: You and a friend have been organizing a small get-together. Your friend promised to bring pastries but forgot and messaged last-minute. You've been handling most logistics lately and are quietly frustrated but don't want a full argument before guests arrive.\nSpeaker (you) \u2192 Listener (friend):\n\"Don't worry about the pastries, I can just take care of it with everything else.\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "sadness",
+        "anticipation"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "unpleasant",
+        "mildly unpleasant"
+      ],
+      "arousal": [
+        "slightly calm",
+        "slightly calm",
+        "slightly calm"
+      ],
+      "dominance": [
+        "slightly controlled",
+        "slightly controlled",
+        "slightly controlled"
+      ],
+      "confidence": [
+        "mildly confident",
+        "confident",
+        "confident"
+      ],
+      "annotators": [
+        "eli",
+        "godwin",
+        "adrian"
+      ]
+    }
+  },
+  {
+    "rank": 19,
+    "scenario_id": 33,
+    "subtype": "deflection-misdirection",
+    "quality_score": 0.746,
+    "priority": 9,
+    "reasons": [
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: During a weekend visit, a mother asks her adult son why he still hasn't transferred his share of the rent after several reminders.\nSpeaker (adult son) \u2192 Listener (mother):\n\"Yeah, about that Mom, thank a load to help me out with a place to crash after my last eviction.\"",
+    "annotations": {
+      "emotions": [
+        "sadness",
+        "joy",
+        "disgust"
+      ],
+      "valence": [
+        "unpleasant",
+        "pleasant",
+        "unpleasant"
+      ],
+      "arousal": [
+        "neutral",
+        "excited",
+        "slightly excited"
+      ],
+      "dominance": [
+        "slightly in control",
+        "in control",
+        "slightly in control"
+      ],
+      "confidence": [
+        "neutral",
+        "confident",
+        "mildly confident"
+      ],
+      "annotators": [
+        "anne_duncan",
+        "tiffanie",
+        "kirill"
+      ]
+    }
+  },
+  {
+    "rank": 20,
+    "scenario_id": 22,
+    "subtype": "sarcasm-irony",
+    "quality_score": 0.756,
+    "priority": 9,
+    "reasons": [
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: You lent your car to your younger sister. The younger sister returned it with a large, obvious dent. You are in the driveway, looking at the damage.\nSpeaker (you) \u2192 Listener (younger sister):\n\"I like the new aerodynmic curves you added to the passenger doors.\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "fear",
+        "anticipation"
+      ],
+      "valence": [
+        "neutral",
+        "unpleasant",
+        "mildly pleasant"
+      ],
+      "arousal": [
+        "slightly excited",
+        "excited",
+        "calm"
+      ],
+      "dominance": [
+        "slightly in control",
+        "slightly controlled",
+        "neutral"
+      ],
+      "confidence": [
+        "confident",
+        "confident",
+        "mildly confident"
+      ],
+      "annotators": [
+        "hannah",
+        "andre",
+        "gwen"
+      ]
+    }
+  },
+  {
+    "rank": 21,
+    "scenario_id": 43,
+    "subtype": "deflection-misdirection",
+    "quality_score": 0.756,
+    "priority": 9,
+    "reasons": [
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: On a walk, a younger ex asks their older ex whether they'd ever consider getting back together; the conversation feels tense and the question is direct.\nSpeaker (older ex partner) \u2192 Listener (younger ex partner):\n\"Did we ever really break up?\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "disgust",
+        "anger"
+      ],
+      "valence": [
+        "unpleasant",
+        "unpleasant",
+        "unpleasant"
+      ],
+      "arousal": [
+        "slightly excited",
+        "slightly excited",
+        "excited"
+      ],
+      "dominance": [
+        "in control",
+        "controlled",
+        "in control"
+      ],
+      "confidence": [
+        "neutral",
+        "very confident",
+        "very confident"
+      ],
+      "annotators": [
+        "anne_duncan",
+        "tiffanie",
+        "kirill"
+      ]
+    }
+  },
+  {
+    "rank": 22,
+    "scenario_id": 23,
+    "subtype": "mixed-signals",
+    "quality_score": 0.766,
+    "priority": 9,
+    "reasons": [
+      "No majority emotion agreement"
+    ],
+    "scenario_text": "Situation: After a fight, your cousin has been distant for weeks and hasn't visited. They send a short message offering you a way back in.\nSpeaker (cousin) \u2192 Listener (you):\n\"If you ever want to come by, the door may be open.\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "joy",
+        "anticipation"
+      ],
+      "valence": [
+        "mildly pleasant",
+        "mildly pleasant",
+        "pleasant"
+      ],
+      "arousal": [
+        "excited",
+        "slightly calm",
+        "neutral"
+      ],
+      "dominance": [
+        "controlled",
+        "neutral",
+        "slightly in control"
+      ],
+      "confidence": [
+        "neutral",
+        "mildly confident",
+        "neutral"
+      ],
+      "annotators": [
+        "anna",
+        "peter",
+        "abhigya"
+      ]
+    }
+  },
+  {
+    "rank": 23,
+    "scenario_id": 13,
+    "subtype": "mixed-signals",
+    "quality_score": 0.802,
+    "priority": 7,
+    "reasons": [
+      "4 major issues"
+    ],
+    "scenario_text": "Situation: After you stayed late helping to prepare materials assigned to you at the last minute. Your manager skims them quickly and replies with a curt comment about timing. You respond the next morning.\nSpeaker (you) \u2192 Listener (manager):\n\"Next time, please give me a bit more notice.\"",
+    "annotations": {
+      "emotions": [
+        "trust",
+        "trust",
+        "anger"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "mildly pleasant",
+        "unpleasant"
+      ],
+      "arousal": [
+        "excited",
+        "slightly calm",
+        "slightly excited"
+      ],
+      "dominance": [
+        "controlled",
+        "in control",
+        "slightly in control"
+      ],
+      "confidence": [
+        "mildly unsure",
+        "mildly confident",
+        "confident"
+      ],
+      "annotators": [
+        "anna",
+        "peter",
+        "abhigya"
+      ]
+    }
+  },
+  {
+    "rank": 24,
+    "scenario_id": 1,
+    "subtype": "deflection-misdirection",
+    "quality_score": 0.802,
+    "priority": 7,
+    "reasons": [
+      "4 major issues"
+    ],
+    "scenario_text": "Situation: In the office kitchen, one colleague brings up that Jamie's slides skipped several key data points and asks if Jamie can explain.\nSpeaker (Jaime) \u2192 Listener (peer):\n\"No worries, I've brought donuts for everyone, let's all grab one! Also, who's up for moving the Friday coffee run to earlier?\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "anger",
+        "surprise"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "mildly unpleasant",
+        "unpleasant"
+      ],
+      "arousal": [
+        "excited",
+        "slightly calm",
+        "calm"
+      ],
+      "dominance": [
+        "controlled",
+        "slightly in control",
+        "slightly controlled"
+      ],
+      "confidence": [
+        "mildly confident",
+        "very confident",
+        "very unsure"
+      ],
+      "annotators": [
+        "anne_duncan",
+        "tiffanie",
+        "kirill"
+      ]
+    }
+  },
+  {
+    "rank": 25,
+    "scenario_id": 49,
+    "subtype": "deflection-misdirection",
+    "quality_score": 0.82,
+    "priority": 7,
+    "reasons": [
+      "2 major issues"
+    ],
+    "scenario_text": "Situation: After a tense conversation where a woman raises concerns about their partner's emotional availability, the woman pushes for a serious discussion about priorities. The partner responds quickly.\nSpeaker (partner) \u2192 Listener (woman):\n\"Available? 24/7 baby\"",
+    "annotations": {
+      "emotions": [
+        "disgust",
+        "disgust",
+        "joy"
+      ],
+      "valence": [
+        "very unpleasant",
+        "very unpleasant",
+        "very pleasant"
+      ],
+      "arousal": [
+        "very calm",
+        "excited",
+        "slightly excited"
+      ],
+      "dominance": [
+        "slightly controlled",
+        "controlled",
+        "slightly in control"
+      ],
+      "confidence": [
+        "mildly confident",
+        "very confident",
+        "confident"
+      ],
+      "annotators": [
+        "anne_duncan",
+        "tiffanie",
+        "kirill"
+      ]
+    }
+  },
+  {
+    "rank": 26,
+    "scenario_id": 18,
+    "subtype": "mixed-signals",
+    "quality_score": 0.823,
+    "priority": 7,
+    "reasons": [
+      "3 major issues"
+    ],
+    "scenario_text": "Situation: You're on a video call with your younger sister. She just finished telling you she's anxious about an upcoming interview and has been pacing. You waited a beat before replying.\nSpeaker (you) \u2192 Listener (sister):\n\"You're doing fine. It's really important, but try not to overthink it.\"",
+    "annotations": {
+      "emotions": [
+        "trust",
+        "fear",
+        "fear"
+      ],
+      "valence": [
+        "neutral",
+        "neutral",
+        "unpleasant"
+      ],
+      "arousal": [
+        "very calm",
+        "slightly excited",
+        "excited"
+      ],
+      "dominance": [
+        "in control",
+        "slightly controlled",
+        "controlled"
+      ],
+      "confidence": [
+        "neutral",
+        "mildly confident",
+        "unsure"
+      ],
+      "annotators": [
+        "anna",
+        "peter",
+        "abhigya"
+      ]
+    }
+  },
+  {
+    "rank": 27,
+    "scenario_id": 49,
+    "subtype": "strategic-politeness",
+    "quality_score": 0.87,
+    "priority": 7,
+    "reasons": [
+      "2 major issues"
+    ],
+    "scenario_text": "Situation: After a first date, you text them to wrap things up. You want to be kind but end the possibility of another date.\nSpeaker (you) \u2192 Listener (date):\n\"You're so kind and I had a nice time tonight. I just don't think we're quite right for each other.\"",
+    "annotations": {
+      "emotions": [
+        "sadness",
+        "sadness",
+        "sadness"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "very unpleasant",
+        "very unpleasant"
+      ],
+      "arousal": [
+        "slightly excited",
+        "neutral",
+        "calm"
+      ],
+      "dominance": [
+        "neutral",
+        "in control",
+        "very controlled"
+      ],
+      "confidence": [
+        "confident",
+        "very confident",
+        "confident"
+      ],
+      "annotators": [
+        "morty",
+        "wisdom",
+        "mous"
+      ]
+    }
+  },
+  {
+    "rank": 28,
+    "scenario_id": 3,
+    "subtype": "sarcasm-irony",
+    "quality_score": 0.882,
+    "priority": 7,
+    "reasons": [
+      "2 major issues"
+    ],
+    "scenario_text": "Situation: In a project meeting a tech running the demo couldn't get the it working, and the presenter found slides were missing. So they both hurriedly skipped explanations while others stared.\nSpeaker (tech) \u2192 Listener (presenter  ):\n\"Well, that went perfectly.\"",
+    "annotations": {
+      "emotions": [
+        "anger",
+        "anger",
+        "fear"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "unpleasant",
+        "mildly unpleasant"
+      ],
+      "arousal": [
+        "very calm",
+        "slightly excited",
+        "slightly excited"
+      ],
+      "dominance": [
+        "neutral",
+        "slightly controlled",
+        "slightly controlled"
+      ],
+      "confidence": [
+        "unsure",
+        "neutral",
+        "confident"
+      ],
+      "annotators": [
+        "hannah",
+        "andre",
+        "gwen"
+      ]
+    }
+  },
+  {
+    "rank": 29,
+    "scenario_id": 50,
+    "subtype": "sarcasm-irony",
+    "quality_score": 0.89,
+    "priority": 7,
+    "reasons": [
+      "2 major issues"
+    ],
+    "scenario_text": "Situation: You met your ex and your ex's partner's at a small gathering of a common friend with your new partner. Later, talking to your new partner, you make this remark the heated argument you saw between your ex and their new partner.\nSpeaker (you) \u2192 Listener (your partner):\n\"Well, I guess I it wasn't just me after all.\"",
+    "annotations": {
+      "emotions": [
+        "disgust",
+        "joy",
+        "joy"
+      ],
+      "valence": [
+        "mildly pleasant",
+        "mildly pleasant",
+        "pleasant"
+      ],
+      "arousal": [
+        "very calm",
+        "neutral",
+        "calm"
+      ],
+      "dominance": [
+        "neutral",
+        "neutral",
+        "very in control"
+      ],
+      "confidence": [
+        "mildly unsure",
+        "mildly unsure",
+        "confident"
+      ],
+      "annotators": [
+        "hannah",
+        "andre",
+        "gwen"
+      ]
+    }
+  },
+  {
+    "rank": 30,
+    "scenario_id": 26,
+    "subtype": "strategic-politeness",
+    "quality_score": 0.89,
+    "priority": 7,
+    "reasons": [
+      "2 major issues"
+    ],
+    "scenario_text": "Situation: A grandparent responds to their grown child's last-minute request to babysit on a weekend they had already planned for themselves.\nSpeaker (grandparent) \u2192 Listener (adult child):\n\"I'd love to babysit, but I can't this weekend. Please tell me if there's another way I can help.\"",
+    "annotations": {
+      "emotions": [
+        "anger",
+        "sadness",
+        "sadness"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "neutral",
+        "mildly unpleasant"
+      ],
+      "arousal": [
+        "slightly excited",
+        "neutral",
+        "slightly calm"
+      ],
+      "dominance": [
+        "slightly controlled",
+        "slightly in control",
+        "slightly in control"
+      ],
+      "confidence": [
+        "neutral",
+        "mildly unsure",
+        "mildly unsure"
+      ],
+      "annotators": [
+        "morty",
+        "wisdom",
+        "mous"
+      ]
+    }
+  },
+  {
+    "rank": 31,
+    "scenario_id": 1,
+    "subtype": "sarcasm-irony",
+    "quality_score": 0.892,
+    "priority": 7,
+    "reasons": [
+      "2 major issues"
+    ],
+    "scenario_text": "Situation: After the programmer accidentally pushed a code update that reverted most of the day's progress, another teammate sighs and addresses the small group of peers who worked on it together.\nSpeaker (teammate) \u2192 Listener (programmer):\n\"Well, that went... great.\"",
+    "annotations": {
+      "emotions": [
+        "sadness",
+        "sadness",
+        "sadness"
+      ],
+      "valence": [
+        "unpleasant",
+        "mildly unpleasant",
+        "mildly unpleasant"
+      ],
+      "arousal": [
+        "very calm",
+        "neutral",
+        "slightly excited"
+      ],
+      "dominance": [
+        "controlled",
+        "neutral",
+        "controlled"
+      ],
+      "confidence": [
+        "mildly confident",
+        "mildly confident",
+        "confident"
+      ],
+      "annotators": [
+        "hannah",
+        "andre",
+        "gwen"
+      ]
+    }
+  },
+  {
+    "rank": 32,
+    "scenario_id": 46,
+    "subtype": "passive-aggression",
+    "quality_score": 0.9,
+    "priority": 7,
+    "reasons": [
+      "2 major issues"
+    ],
+    "scenario_text": "Situation: You planned a small anniversary dinner with your partner, but they forgot and spent the evening with friends. Your partner apologized the next day. You are both tired and still living in the same place, so direct confrontation would escalate things.\nSpeaker (you) \u2192 Listener (forgetful partner):\n\"It's totally fine. Don't worry about it, I'm glad you had a nice night.\"",
+    "annotations": {
+      "emotions": [
+        "trust",
+        "sadness",
+        "trust"
+      ],
+      "valence": [
+        "mildly pleasant",
+        "unpleasant",
+        "mildly pleasant"
+      ],
+      "arousal": [
+        "slightly calm",
+        "slightly calm",
+        "excited"
+      ],
+      "dominance": [
+        "controlled",
+        "slightly controlled",
+        "neutral"
+      ],
+      "confidence": [
+        "mildly unsure",
+        "neutral",
+        "confident"
+      ],
+      "annotators": [
+        "eli",
+        "godwin",
+        "adrian"
+      ]
+    }
+  },
+  {
+    "rank": 33,
+    "scenario_id": 55,
+    "subtype": "deflection-misdirection",
+    "quality_score": 0.9,
+    "priority": 7,
+    "reasons": [
+      "2 major issues"
+    ],
+    "scenario_text": "Situation: A group chat of friends on Messenger where one man recently hinted they were upset after a breakup; a friend asks if they're okay.\nSpeaker (man) \u2192 Listener (friend):\n\"OK? I'm about as sound as the English pound.\"",
+    "annotations": {
+      "emotions": [
+        "sadness",
+        "sadness",
+        "surprise"
+      ],
+      "valence": [
+        "mildly unpleasant",
+        "mildly unpleasant",
+        "mildly unpleasant"
+      ],
+      "arousal": [
+        "calm",
+        "slightly calm",
+        "slightly calm"
+      ],
+      "dominance": [
+        "in control",
+        "neutral",
+        "slightly controlled"
+      ],
+      "confidence": [
+        "mildly confident",
+        "very confident",
+        "very unsure"
+      ],
+      "annotators": [
+        "anne_duncan",
+        "tiffanie",
+        "kirill"
+      ]
+    }
+  },
+  {
+    "rank": 34,
+    "scenario_id": 17,
+    "subtype": "passive-aggression",
+    "quality_score": 0.91,
+    "priority": 7,
+    "reasons": [
+      "2 major issues"
+    ],
+    "scenario_text": "Situation: A junior analyst posts a reply in a team thread after a senior analyst provided detailed critiques and requested last-minute changes to a report that was already reviewed. The team has a history of late edits from that senior analyst.\nSpeaker (junior analyst) \u2192 Listener (senior analyst):\n\"Thanks for the notes, I'll make the edits, and hopefully next time we can avoid so many last-minute changes.\"",
+    "annotations": {
+      "emotions": [
+        "surprise",
+        "anger",
+        "surprise"
+      ],
+      "valence": [
+        "unpleasant",
+        "mildly unpleasant",
+        "mildly unpleasant"
+      ],
+      "arousal": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "dominance": [
+        "in control",
+        "slightly in control",
+        "in control"
+      ],
+      "confidence": [
+        "mildly unsure",
+        "mildly confident",
+        "confident"
+      ],
+      "annotators": [
+        "eli",
+        "godwin",
+        "adrian"
+      ]
+    }
+  },
+  {
+    "rank": 35,
+    "scenario_id": 52,
+    "subtype": "mixed-signals",
+    "quality_score": 0.92,
+    "priority": 7,
+    "reasons": [
+      "2 major issues"
+    ],
+    "scenario_text": "Situation: You spent hours helping a close friend redo their dating profile and even stayed late to give feedback. Shortly after, you see they post something reckless and you reply quickly with a sharp line.\nSpeaker (you) \u2192 Listener (friend):\n\"Be original but don't be weird. Get it together or people might ghost you.\"",
+    "annotations": {
+      "emotions": [
+        "fear",
+        "sadness",
+        "sadness"
+      ],
+      "valence": [
+        "unpleasant",
+        "unpleasant",
+        "unpleasant"
+      ],
+      "arousal": [
+        "slightly excited",
+        "slightly calm",
+        "slightly calm"
+      ],
+      "dominance": [
+        "neutral",
+        "slightly controlled",
+        "controlled"
+      ],
+      "confidence": [
+        "mildly unsure",
+        "confident",
+        "unsure"
+      ],
+      "annotators": [
+        "anna",
+        "peter",
+        "abhigya"
+      ]
+    }
+  }
+]

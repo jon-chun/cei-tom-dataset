@@ -1,0 +1,4496 @@
+{
+  "summary": {
+    "total_scenarios": 300,
+    "scenarios_flagged": 35,
+    "flagged_rate": 0.1167,
+    "sample_size": 42,
+    "sample_rate": 0.14,
+    "mandatory_count": 22,
+    "stratified_count": 20,
+    "files_requiring_review": 1
+  },
+  "agreement": {
+    "overall_fleiss_kappa": 0.1238,
+    "by_subtype": {
+      "deflection-misdirection": 0.0625,
+      "mixed-signals": 0.1621,
+      "passive-aggression": -0.0564,
+      "sarcasm-irony": 0.2517,
+      "strategic-politeness": 0.1991
+    }
+  },
+  "coverage_by_subtype": {
+    "passive-aggression": 12,
+    "mixed-signals": 8,
+    "deflection-misdirection": 12,
+    "strategic-politeness": 6,
+    "sarcasm-irony": 4
+  },
+  "mandatory_reviews": [
+    {
+      "scenario_id": 15,
+      "task_id": 1261,
+      "subtype": "passive-aggression",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-28_adrian-passive-aggression_-at-2025-12-07-21-14-9d7f54cc.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-21_godwin-passive-aggression_at-2025-12-07-13-34-9f9dfd99.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-20_eli-passive-aggression_at-2025-12-08-01-16-d6ab1c16.json"
+      ],
+      "quality_score": 0.5955,
+      "quality_bucket": "questionable",
+      "schema_score": 1.0,
+      "consistency_score": 0.2,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.95,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "5 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 8,
+      "critical_count": 0,
+      "major_count": 5,
+      "issues": [
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'mildly unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 15,
+            "field": "sl_confidence",
+            "value": "mildly unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1B_suspicious_lead_time",
+          "flag_stage": "1B",
+          "severity": "info",
+          "message": "Unusually slow annotation: 622s (10.4 min)",
+          "details": {
+            "scenario_id": 15,
+            "lead_time": 622.09,
+            "threshold": 600.0,
+            "type": "unusually_slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 313.3s (z=10.13)",
+          "details": {
+            "scenario_id": 15,
+            "lead_time": 313.284,
+            "median_time": 58.95,
+            "mad": 16.94,
+            "modified_z_score": 10.13,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 622.1s (z=11.91)",
+          "details": {
+            "scenario_id": 15,
+            "lead_time": 622.09,
+            "median_time": 63.85,
+            "mad": 31.62,
+            "modified_z_score": 11.91,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 576.2s (z=10.49)",
+          "details": {
+            "scenario_id": 15,
+            "lead_time": 576.247,
+            "median_time": 62.59,
+            "mad": 33.02,
+            "modified_z_score": 10.49,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'surprise', 'sadness', 'trust'}",
+          "details": {
+            "scenario_id": 15,
+            "subtype": "passive-aggression",
+            "emotions": [
+              "surprise",
+              "sadness",
+              "trust"
+            ],
+            "unique_emotions": [
+              "surprise",
+              "sadness",
+              "trust"
+            ],
+            "by_annotator": {
+              "eli": "surprise",
+              "godwin": "sadness",
+              "adrian": "trust"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate dominance disagreement (range=1.33)",
+          "details": {
+            "scenario_id": 15,
+            "dimension": "dominance",
+            "values": [
+              -1.0,
+              -0.33,
+              0.33
+            ],
+            "range": 1.33,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-1.0) unusual for 'surprise' (expected (-0.6, 0.4))",
+          "details": {
+            "scenario_id": 15,
+            "annotator": "eli",
+            "emotion": "surprise",
+            "dimension": "dominance",
+            "value": -1.0,
+            "expected_range": [
+              -0.6,
+              0.4
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: A junior developer is responding to their manager after being asked to handle another round of weekend QA. The junior has been given disproportionate weekend work compared with more senior colleagues over several cycles.\nSpeaker (junior developer) \u2192 Listener (engineering manager):\n\"Sure, I'll take care of the extra QA this weekend, don't worry about me; I know you have more important things to do.\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "sadness",
+          "trust"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "unpleasant",
+          "mildly pleasant"
+        ],
+        "arousal": [
+          "neutral",
+          "slightly calm",
+          "neutral"
+        ],
+        "dominance": [
+          "very controlled",
+          "slightly controlled",
+          "slightly in control"
+        ],
+        "confidence": [
+          "mildly unsure",
+          "mildly confident",
+          "confident"
+        ],
+        "annotators": [
+          "eli",
+          "godwin",
+          "adrian"
+        ]
+      }
+    },
+    {
+      "scenario_id": 33,
+      "task_id": 1445,
+      "subtype": "mixed-signals",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-16_anna-mixed-signals_at-2025-12-08-04-24-2841df6f.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-18_abhigya-mixed-signals_at-2025-12-08-03-01-59e2979a.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-17-peter-mixed-signals_at-2025-12-07-19-41-54b48278.json"
+      ],
+      "quality_score": 0.6455,
+      "quality_bucket": "questionable",
+      "schema_score": 1.0,
+      "consistency_score": 0.4,
+      "agreement_score": 0.33,
+      "plausibility_score": 1.0,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "4 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 4,
+      "critical_count": 0,
+      "major_count": 4,
+      "issues": [
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 33,
+            "field": "sl_confidence",
+            "value": "unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 33,
+            "field": "sl_confidence",
+            "value": "unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 159.4s (z=4.56)",
+          "details": {
+            "scenario_id": 33,
+            "lead_time": 159.369,
+            "median_time": 69.1,
+            "mad": 13.36,
+            "modified_z_score": 4.56,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'surprise', 'sadness', 'trust'}",
+          "details": {
+            "scenario_id": 33,
+            "subtype": "mixed-signals",
+            "emotions": [
+              "surprise",
+              "trust",
+              "sadness"
+            ],
+            "unique_emotions": [
+              "surprise",
+              "sadness",
+              "trust"
+            ],
+            "by_annotator": {
+              "anna": "surprise",
+              "peter": "trust",
+              "abhigya": "sadness"
+            }
+          }
+        }
+      ],
+      "scenario_text": "Situation: A 23-year-old adult child texts their parent at 2:15 AM after a rough day at work. The parent often responds quickly when worried but has also been short tempered lately, claiming to be exhausted from extra shifts.\nSpeaker (mother) \u2192 Listener (adult child):\n\"You're doing fine, just call me if you need anything.\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "trust",
+          "sadness"
+        ],
+        "valence": [
+          "neutral",
+          "mildly pleasant",
+          "very unpleasant"
+        ],
+        "arousal": [
+          "slightly excited",
+          "neutral",
+          "calm"
+        ],
+        "dominance": [
+          "slightly in control",
+          "neutral",
+          "controlled"
+        ],
+        "confidence": [
+          "unsure",
+          "mildly confident",
+          "unsure"
+        ],
+        "annotators": [
+          "anna",
+          "peter",
+          "abhigya"
+        ]
+      }
+    },
+    {
+      "scenario_id": 57,
+      "task_id": 1275,
+      "subtype": "passive-aggression",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-28_adrian-passive-aggression_-at-2025-12-07-21-14-9d7f54cc.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-21_godwin-passive-aggression_at-2025-12-07-13-34-9f9dfd99.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-20_eli-passive-aggression_at-2025-12-08-01-16-d6ab1c16.json"
+      ],
+      "quality_score": 0.6855,
+      "quality_bucket": "questionable",
+      "schema_score": 1.0,
+      "consistency_score": 0.6,
+      "agreement_score": 0.33,
+      "plausibility_score": 1.0,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "3 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 6,
+      "critical_count": 0,
+      "major_count": 3,
+      "issues": [
+        {
+          "flag": "1B_suspicious_lead_time",
+          "flag_stage": "1B",
+          "severity": "info",
+          "message": "Unusually slow annotation: 623s (10.4 min)",
+          "details": {
+            "scenario_id": 57,
+            "lead_time": 623.151,
+            "threshold": 600.0,
+            "type": "unusually_slow"
+          }
+        },
+        {
+          "flag": "1B_suspicious_lead_time",
+          "flag_stage": "1B",
+          "severity": "info",
+          "message": "Unusually slow annotation: 2159s (36.0 min)",
+          "details": {
+            "scenario_id": 57,
+            "lead_time": 2158.789,
+            "threshold": 600.0,
+            "type": "unusually_slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 623.2s (z=11.93)",
+          "details": {
+            "scenario_id": 57,
+            "lead_time": 623.151,
+            "median_time": 63.85,
+            "mad": 31.62,
+            "modified_z_score": 11.93,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 2158.8s (z=42.82)",
+          "details": {
+            "scenario_id": 57,
+            "lead_time": 2158.789,
+            "median_time": 62.59,
+            "mad": 33.02,
+            "modified_z_score": 42.82,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anger', 'sadness', 'disgust'}",
+          "details": {
+            "scenario_id": 57,
+            "subtype": "passive-aggression",
+            "emotions": [
+              "anger",
+              "sadness",
+              "disgust"
+            ],
+            "unique_emotions": [
+              "anger",
+              "sadness",
+              "disgust"
+            ],
+            "by_annotator": {
+              "eli": "anger",
+              "godwin": "sadness",
+              "adrian": "disgust"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate arousal disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 57,
+            "dimension": "arousal",
+            "values": [
+              0.0,
+              -0.67,
+              0.67
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        }
+      ],
+      "scenario_text": "Situation: In a team Slack channel for a peer software project. A teammate who has missed several deadlines just posted a late-but-working patch fix and a short summary of what they changed.\nSpeaker (you) \u2192 Listener (teammate  ):\n\"Nice, it actually works. \"",
+      "annotations_summary": {
+        "emotions": [
+          "anger",
+          "sadness",
+          "disgust"
+        ],
+        "valence": [
+          "unpleasant",
+          "unpleasant",
+          "unpleasant"
+        ],
+        "arousal": [
+          "neutral",
+          "calm",
+          "excited"
+        ],
+        "dominance": [
+          "neutral",
+          "slightly controlled",
+          "neutral"
+        ],
+        "confidence": [
+          "confident",
+          "neutral",
+          "confident"
+        ],
+        "annotators": [
+          "eli",
+          "godwin",
+          "adrian"
+        ]
+      }
+    },
+    {
+      "scenario_id": 18,
+      "task_id": 1263,
+      "subtype": "passive-aggression",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-28_adrian-passive-aggression_-at-2025-12-07-21-14-9d7f54cc.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-21_godwin-passive-aggression_at-2025-12-07-13-34-9f9dfd99.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-20_eli-passive-aggression_at-2025-12-08-01-16-d6ab1c16.json"
+      ],
+      "quality_score": 0.6955,
+      "quality_bucket": "questionable",
+      "schema_score": 1.0,
+      "consistency_score": 0.75,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.9,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 5,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 264.5s (z=4.28)",
+          "details": {
+            "scenario_id": 18,
+            "lead_time": 264.462,
+            "median_time": 63.85,
+            "mad": 31.62,
+            "modified_z_score": 4.28,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "minor",
+          "message": "Dwell time outlier (slow): 187.2s (z=2.55)",
+          "details": {
+            "scenario_id": 18,
+            "lead_time": 187.19799999999998,
+            "median_time": 62.59,
+            "mad": 33.02,
+            "modified_z_score": 2.55,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'joy', 'surprise', 'sadness'}",
+          "details": {
+            "scenario_id": 18,
+            "subtype": "passive-aggression",
+            "emotions": [
+              "surprise",
+              "sadness",
+              "joy"
+            ],
+            "unique_emotions": [
+              "joy",
+              "surprise",
+              "sadness"
+            ],
+            "by_annotator": {
+              "eli": "surprise",
+              "godwin": "sadness",
+              "adrian": "joy"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.7) unusual for 'joy' (expected (-0.3, 0.7))",
+          "details": {
+            "scenario_id": 18,
+            "annotator": "adrian",
+            "emotion": "joy",
+            "dimension": "arousal",
+            "value": -0.67,
+            "expected_range": [
+              -0.3,
+              0.7
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.3) unusual for 'joy' (expected (0.0, 1.0))",
+          "details": {
+            "scenario_id": 18,
+            "annotator": "adrian",
+            "emotion": "joy",
+            "dimension": "dominance",
+            "value": -0.33,
+            "expected_range": [
+              0.0,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: You and your sibling usually trade cooking and chores. Lately they cancel plans and expect you to cover evenings. Tonight they say they need to head out with friends right before dinner.\nSpeaker (You) \u2192 Listener (younger sibling):\n\"Oh, it's fine go ahead and go; I can make dinner again, don't worry about me.\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "sadness",
+          "joy"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "unpleasant",
+          "neutral"
+        ],
+        "arousal": [
+          "neutral",
+          "slightly calm",
+          "calm"
+        ],
+        "dominance": [
+          "slightly in control",
+          "controlled",
+          "slightly controlled"
+        ],
+        "confidence": [
+          "mildly confident",
+          "confident",
+          "confident"
+        ],
+        "annotators": [
+          "eli",
+          "godwin",
+          "adrian"
+        ]
+      }
+    },
+    {
+      "scenario_id": 21,
+      "task_id": 1264,
+      "subtype": "passive-aggression",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-28_adrian-passive-aggression_-at-2025-12-07-21-14-9d7f54cc.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-21_godwin-passive-aggression_at-2025-12-07-13-34-9f9dfd99.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-20_eli-passive-aggression_at-2025-12-08-01-16-d6ab1c16.json"
+      ],
+      "quality_score": 0.6955,
+      "quality_bucket": "questionable",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.85,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "3 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 7,
+      "critical_count": 0,
+      "major_count": 3,
+      "issues": [
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'mildly unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 21,
+            "field": "sl_confidence",
+            "value": "mildly unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'surprise', 'sadness', 'disgust'}",
+          "details": {
+            "scenario_id": 21,
+            "subtype": "passive-aggression",
+            "emotions": [
+              "surprise",
+              "sadness",
+              "disgust"
+            ],
+            "unique_emotions": [
+              "surprise",
+              "sadness",
+              "disgust"
+            ],
+            "by_annotator": {
+              "eli": "surprise",
+              "godwin": "sadness",
+              "adrian": "disgust"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate valence disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 21,
+            "dimension": "valence",
+            "values": [
+              -0.67,
+              -0.67,
+              0.67
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "High dominance disagreement (range=1.67)",
+          "details": {
+            "scenario_id": 21,
+            "dimension": "dominance",
+            "field": "sl_d",
+            "values": [
+              -0.33,
+              -0.67,
+              1.0
+            ],
+            "range": 1.67,
+            "threshold": 1.5,
+            "by_annotator": {
+              "eli": "slightly controlled",
+              "godwin": "controlled",
+              "adrian": "very in control"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.3) unusual for 'surprise' (expected (0.3, 1.0))",
+          "details": {
+            "scenario_id": 21,
+            "annotator": "eli",
+            "emotion": "surprise",
+            "dimension": "arousal",
+            "value": -0.33,
+            "expected_range": [
+              0.3,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Valence (0.7) unusual for 'disgust' (expected (-1.0, -0.3))",
+          "details": {
+            "scenario_id": 21,
+            "annotator": "adrian",
+            "emotion": "disgust",
+            "dimension": "valence",
+            "value": 0.67,
+            "expected_range": [
+              -1.0,
+              -0.3
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.7) unusual for 'disgust' (expected (-0.3, 0.6))",
+          "details": {
+            "scenario_id": 21,
+            "annotator": "adrian",
+            "emotion": "disgust",
+            "dimension": "arousal",
+            "value": -0.67,
+            "expected_range": [
+              -0.3,
+              0.6
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: Two adult siblings coordinate driving their elderly parent to a mid-morning medical appointment. The younger sibling texts that they'll be a bit late because of work, and the older sibling, who has done most of the rides lately, replies immediately.\nSpeaker (older sibling) \u2192 Listener (younger sibling):\n\"Oh, that's fine take as long as you need. I\u2019ve got all the time in the world like always.\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "sadness",
+          "disgust"
+        ],
+        "valence": [
+          "unpleasant",
+          "unpleasant",
+          "pleasant"
+        ],
+        "arousal": [
+          "slightly calm",
+          "neutral",
+          "calm"
+        ],
+        "dominance": [
+          "slightly controlled",
+          "controlled",
+          "very in control"
+        ],
+        "confidence": [
+          "mildly unsure",
+          "confident",
+          "confident"
+        ],
+        "annotators": [
+          "eli",
+          "godwin",
+          "adrian"
+        ]
+      }
+    },
+    {
+      "scenario_id": 39,
+      "task_id": 1268,
+      "subtype": "passive-aggression",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-28_adrian-passive-aggression_-at-2025-12-07-21-14-9d7f54cc.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-21_godwin-passive-aggression_at-2025-12-07-13-34-9f9dfd99.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-20_eli-passive-aggression_at-2025-12-08-01-16-d6ab1c16.json"
+      ],
+      "quality_score": 0.6955,
+      "quality_bucket": "questionable",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.85,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 5,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 550.7s (z=9.97)",
+          "details": {
+            "scenario_id": 39,
+            "lead_time": 550.653,
+            "median_time": 62.59,
+            "mad": 33.02,
+            "modified_z_score": 9.97,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anticipation', 'surprise', 'sadness'}",
+          "details": {
+            "scenario_id": 39,
+            "subtype": "passive-aggression",
+            "emotions": [
+              "anticipation",
+              "sadness",
+              "surprise"
+            ],
+            "unique_emotions": [
+              "anticipation",
+              "surprise",
+              "sadness"
+            ],
+            "by_annotator": {
+              "eli": "anticipation",
+              "godwin": "sadness",
+              "adrian": "surprise"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Valence (-0.7) unusual for 'anticipation' (expected (0.0, 0.7))",
+          "details": {
+            "scenario_id": 39,
+            "annotator": "eli",
+            "emotion": "anticipation",
+            "dimension": "valence",
+            "value": -0.67,
+            "expected_range": [
+              0.0,
+              0.7
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.3) unusual for 'anticipation' (expected (0.0, 0.7))",
+          "details": {
+            "scenario_id": 39,
+            "annotator": "eli",
+            "emotion": "anticipation",
+            "dimension": "arousal",
+            "value": -0.33,
+            "expected_range": [
+              0.0,
+              0.7
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-1.0) unusual for 'surprise' (expected (-0.6, 0.4))",
+          "details": {
+            "scenario_id": 39,
+            "annotator": "adrian",
+            "emotion": "surprise",
+            "dimension": "dominance",
+            "value": -1.0,
+            "expected_range": [
+              -0.6,
+              0.4
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: You lent a favorite jacket to a close friend for a concert; they returned it with a faint wine stain and the sleeve a bit stretched. This isn't the first time they've been careless with your things, and you haven't directly complained before.\nSpeaker (you) \u2192 Listener (friend):\n\"Thanks for bringing my jacket back, its almost like new.\"",
+      "annotations_summary": {
+        "emotions": [
+          "anticipation",
+          "sadness",
+          "surprise"
+        ],
+        "valence": [
+          "unpleasant",
+          "unpleasant",
+          "mildly unpleasant"
+        ],
+        "arousal": [
+          "slightly calm",
+          "slightly calm",
+          "slightly excited"
+        ],
+        "dominance": [
+          "neutral",
+          "slightly controlled",
+          "very controlled"
+        ],
+        "confidence": [
+          "neutral",
+          "mildly confident",
+          "confident"
+        ],
+        "annotators": [
+          "eli",
+          "godwin",
+          "adrian"
+        ]
+      }
+    },
+    {
+      "scenario_id": 47,
+      "task_id": 1273,
+      "subtype": "passive-aggression",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-28_adrian-passive-aggression_-at-2025-12-07-21-14-9d7f54cc.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-21_godwin-passive-aggression_at-2025-12-07-13-34-9f9dfd99.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-20_eli-passive-aggression_at-2025-12-08-01-16-d6ab1c16.json"
+      ],
+      "quality_score": 0.7055,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.75,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.95,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 6,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'mildly unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 47,
+            "field": "sl_confidence",
+            "value": "mildly unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "minor",
+          "message": "Dwell time outlier (slow): 215.7s (z=3.24)",
+          "details": {
+            "scenario_id": 47,
+            "lead_time": 215.661,
+            "median_time": 63.85,
+            "mad": 31.62,
+            "modified_z_score": 3.24,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'joy', 'surprise', 'sadness'}",
+          "details": {
+            "scenario_id": 47,
+            "subtype": "passive-aggression",
+            "emotions": [
+              "surprise",
+              "sadness",
+              "joy"
+            ],
+            "unique_emotions": [
+              "joy",
+              "surprise",
+              "sadness"
+            ],
+            "by_annotator": {
+              "eli": "surprise",
+              "godwin": "sadness",
+              "adrian": "joy"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate valence disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 47,
+            "dimension": "valence",
+            "values": [
+              -0.67,
+              -0.67,
+              0.67
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate dominance disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 47,
+            "dimension": "dominance",
+            "values": [
+              0.0,
+              -0.67,
+              0.67
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.3) unusual for 'surprise' (expected (0.3, 1.0))",
+          "details": {
+            "scenario_id": 47,
+            "annotator": "eli",
+            "emotion": "surprise",
+            "dimension": "arousal",
+            "value": -0.33,
+            "expected_range": [
+              0.3,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: You have often been the one to rearrange plans with your old friend group when a newer member joins and tends to cancel last minute. After the new friend cancels again citing 'unexpected work stuff,' you message them while organizing the week.\nSpeaker (you) \u2192 Listener (new friend):\n\"No problem at all. Text me when you're free next and I'll find a time that works for you.\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "sadness",
+          "joy"
+        ],
+        "valence": [
+          "unpleasant",
+          "unpleasant",
+          "pleasant"
+        ],
+        "arousal": [
+          "slightly calm",
+          "slightly calm",
+          "neutral"
+        ],
+        "dominance": [
+          "neutral",
+          "controlled",
+          "in control"
+        ],
+        "confidence": [
+          "confident",
+          "mildly unsure",
+          "very confident"
+        ],
+        "annotators": [
+          "eli",
+          "godwin",
+          "adrian"
+        ]
+      }
+    },
+    {
+      "scenario_id": 42,
+      "task_id": 1748,
+      "subtype": "deflection-misdirection",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-14_tiffanie-deflection-misdirection_-at-2025-12-07-22-50-c8d43bb7.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-15_kirill-deflection-misdirection_at-2025-12-07-13-33-d7c44bd6.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-13_anne-duncan-deflection-misdirection_-at-2025-12-07-21-15-b32f81aa.json"
+      ],
+      "quality_score": 0.7055,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.75,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.95,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 4,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 42,
+            "field": "sl_confidence",
+            "value": "unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "minor",
+          "message": "Dwell time outlier (slow): 51.0s (z=2.80)",
+          "details": {
+            "scenario_id": 42,
+            "lead_time": 50.985,
+            "median_time": 24.23,
+            "mad": 6.44,
+            "modified_z_score": 2.8,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anticipation', 'surprise', 'sadness'}",
+          "details": {
+            "scenario_id": 42,
+            "subtype": "deflection-misdirection",
+            "emotions": [
+              "anticipation",
+              "sadness",
+              "surprise"
+            ],
+            "unique_emotions": [
+              "anticipation",
+              "surprise",
+              "sadness"
+            ],
+            "by_annotator": {
+              "anne_duncan": "anticipation",
+              "tiffanie": "sadness",
+              "kirill": "surprise"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (0.3) unusual for 'sadness' (expected (-1.0, 0.0))",
+          "details": {
+            "scenario_id": 42,
+            "annotator": "tiffanie",
+            "emotion": "sadness",
+            "dimension": "arousal",
+            "value": 0.33,
+            "expected_range": [
+              -1.0,
+              0.0
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: At a cafe, a younger friend asks their older friend if the younger friend is still seeing the person they'd been dating a few months ago, after rumors at a mutual friend's party.\nSpeaker (older_friend) \u2192 Listener (younger_friend):\n\"Still seeing them? Like you're seeing your partner? BTW, hows that going?\"",
+      "annotations_summary": {
+        "emotions": [
+          "anticipation",
+          "sadness",
+          "surprise"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "mildly unpleasant",
+          "unpleasant"
+        ],
+        "arousal": [
+          "neutral",
+          "slightly excited",
+          "neutral"
+        ],
+        "dominance": [
+          "slightly in control",
+          "slightly controlled",
+          "neutral"
+        ],
+        "confidence": [
+          "neutral",
+          "confident",
+          "unsure"
+        ],
+        "annotators": [
+          "anne_duncan",
+          "tiffanie",
+          "kirill"
+        ]
+      }
+    },
+    {
+      "scenario_id": 43,
+      "task_id": 914,
+      "subtype": "strategic-politeness",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-26_wisdom-strategic-politeness_-at-2025-12-07-13-35-7dd50846.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-25_morty-strategic-politeness-at-2025-12-08-01-18-4ed42e46.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-27_mous-strategic-politeness_at-2025-12-08-07-02-14829172.json"
+      ],
+      "quality_score": 0.7055,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.9,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 4,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 239.1s (z=4.77)",
+          "details": {
+            "scenario_id": 43,
+            "lead_time": 239.124,
+            "median_time": 62.36,
+            "mad": 24.99,
+            "modified_z_score": 4.77,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anger', 'sadness', 'disgust'}",
+          "details": {
+            "scenario_id": 43,
+            "subtype": "strategic-politeness",
+            "emotions": [
+              "sadness",
+              "disgust",
+              "anger"
+            ],
+            "unique_emotions": [
+              "anger",
+              "sadness",
+              "disgust"
+            ],
+            "by_annotator": {
+              "morty": "sadness",
+              "wisdom": "disgust",
+              "mous": "anger"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.7) unusual for 'disgust' (expected (0.0, 0.8))",
+          "details": {
+            "scenario_id": 43,
+            "annotator": "wisdom",
+            "emotion": "disgust",
+            "dimension": "dominance",
+            "value": -0.67,
+            "expected_range": [
+              0.0,
+              0.8
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.3) unusual for 'anger' (expected (0.2, 1.0))",
+          "details": {
+            "scenario_id": 43,
+            "annotator": "mous",
+            "emotion": "anger",
+            "dimension": "dominance",
+            "value": -0.33,
+            "expected_range": [
+              0.2,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: A friend who usually makes last-minute plans is telling you they can't keep accommodating you after repeated cancellations.\nSpeaker (you) \u2192 Listener (friend):\n\"I apologize my schedule is so rigid and requires a little bit more planning.\"",
+      "annotations_summary": {
+        "emotions": [
+          "sadness",
+          "disgust",
+          "anger"
+        ],
+        "valence": [
+          "neutral",
+          "mildly unpleasant",
+          "mildly unpleasant"
+        ],
+        "arousal": [
+          "neutral",
+          "neutral",
+          "slightly excited"
+        ],
+        "dominance": [
+          "very controlled",
+          "controlled",
+          "slightly controlled"
+        ],
+        "confidence": [
+          "neutral",
+          "mildly confident",
+          "neutral"
+        ],
+        "annotators": [
+          "morty",
+          "wisdom",
+          "mous"
+        ]
+      }
+    },
+    {
+      "scenario_id": 52,
+      "task_id": 1274,
+      "subtype": "passive-aggression",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-28_adrian-passive-aggression_-at-2025-12-07-21-14-9d7f54cc.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-21_godwin-passive-aggression_at-2025-12-07-13-34-9f9dfd99.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-20_eli-passive-aggression_at-2025-12-08-01-16-d6ab1c16.json"
+      ],
+      "quality_score": 0.7055,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.9,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 4,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 362.8s (z=6.13)",
+          "details": {
+            "scenario_id": 52,
+            "lead_time": 362.761,
+            "median_time": 62.59,
+            "mad": 33.02,
+            "modified_z_score": 6.13,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anticipation', 'sadness', 'trust'}",
+          "details": {
+            "scenario_id": 52,
+            "subtype": "passive-aggression",
+            "emotions": [
+              "anticipation",
+              "sadness",
+              "trust"
+            ],
+            "unique_emotions": [
+              "anticipation",
+              "sadness",
+              "trust"
+            ],
+            "by_annotator": {
+              "eli": "anticipation",
+              "godwin": "sadness",
+              "adrian": "trust"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Valence (-0.7) unusual for 'anticipation' (expected (0.0, 0.7))",
+          "details": {
+            "scenario_id": 52,
+            "annotator": "eli",
+            "emotion": "anticipation",
+            "dimension": "valence",
+            "value": -0.67,
+            "expected_range": [
+              0.0,
+              0.7
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.3) unusual for 'anticipation' (expected (0.0, 0.7))",
+          "details": {
+            "scenario_id": 52,
+            "annotator": "eli",
+            "emotion": "anticipation",
+            "dimension": "arousal",
+            "value": -0.33,
+            "expected_range": [
+              0.0,
+              0.7
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: You and a friend had plans to go out. Your friend (who usually calls the shots socially) cancels last minute yet again. You respond when they apologize.\nSpeaker (you) \u2192 Listener (friend):\n\"It's fine, don't worry about it. I'm happy to stay in again.\"",
+      "annotations_summary": {
+        "emotions": [
+          "anticipation",
+          "sadness",
+          "trust"
+        ],
+        "valence": [
+          "unpleasant",
+          "mildly unpleasant",
+          "mildly pleasant"
+        ],
+        "arousal": [
+          "slightly calm",
+          "slightly calm",
+          "neutral"
+        ],
+        "dominance": [
+          "slightly controlled",
+          "slightly controlled",
+          "in control"
+        ],
+        "confidence": [
+          "confident",
+          "neutral",
+          "confident"
+        ],
+        "annotators": [
+          "eli",
+          "godwin",
+          "adrian"
+        ]
+      }
+    },
+    {
+      "scenario_id": 36,
+      "task_id": 1745,
+      "subtype": "deflection-misdirection",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-14_tiffanie-deflection-misdirection_-at-2025-12-07-22-50-c8d43bb7.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-15_kirill-deflection-misdirection_at-2025-12-07-13-33-d7c44bd6.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-13_anne-duncan-deflection-misdirection_-at-2025-12-07-21-15-b32f81aa.json"
+      ],
+      "quality_score": 0.7055,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.9,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 4,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 98.6s (z=7.79)",
+          "details": {
+            "scenario_id": 36,
+            "lead_time": 98.633,
+            "median_time": 24.23,
+            "mad": 6.44,
+            "modified_z_score": 7.79,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'surprise', 'sadness', 'disgust'}",
+          "details": {
+            "scenario_id": 36,
+            "subtype": "deflection-misdirection",
+            "emotions": [
+              "disgust",
+              "sadness",
+              "surprise"
+            ],
+            "unique_emotions": [
+              "surprise",
+              "sadness",
+              "disgust"
+            ],
+            "by_annotator": {
+              "anne_duncan": "disgust",
+              "tiffanie": "sadness",
+              "kirill": "surprise"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.7) unusual for 'disgust' (expected (0.0, 0.8))",
+          "details": {
+            "scenario_id": 36,
+            "annotator": "anne_duncan",
+            "emotion": "disgust",
+            "dimension": "dominance",
+            "value": -0.67,
+            "expected_range": [
+              0.0,
+              0.8
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (0.7) unusual for 'sadness' (expected (-1.0, 0.0))",
+          "details": {
+            "scenario_id": 36,
+            "annotator": "tiffanie",
+            "emotion": "sadness",
+            "dimension": "arousal",
+            "value": 0.67,
+            "expected_range": [
+              -1.0,
+              0.0
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: On a second date, the conversation turns serious when the woman asks her partner whether they should be exclusive.\nSpeaker (partner) \u2192 Listener (woman):\n\"You bet, as serious as a heart attack!\"",
+      "annotations_summary": {
+        "emotions": [
+          "disgust",
+          "sadness",
+          "surprise"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "unpleasant",
+          "mildly pleasant"
+        ],
+        "arousal": [
+          "slightly excited",
+          "excited",
+          "excited"
+        ],
+        "dominance": [
+          "controlled",
+          "controlled",
+          "slightly in control"
+        ],
+        "confidence": [
+          "confident",
+          "confident",
+          "neutral"
+        ],
+        "annotators": [
+          "anne_duncan",
+          "tiffanie",
+          "kirill"
+        ]
+      }
+    },
+    {
+      "scenario_id": 37,
+      "task_id": 1746,
+      "subtype": "deflection-misdirection",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-14_tiffanie-deflection-misdirection_-at-2025-12-07-22-50-c8d43bb7.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-15_kirill-deflection-misdirection_at-2025-12-07-13-33-d7c44bd6.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-13_anne-duncan-deflection-misdirection_-at-2025-12-07-21-15-b32f81aa.json"
+      ],
+      "quality_score": 0.7055,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.9,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 4,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 84.6s (z=6.32)",
+          "details": {
+            "scenario_id": 37,
+            "lead_time": 84.607,
+            "median_time": 24.23,
+            "mad": 6.44,
+            "modified_z_score": 6.32,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anticipation', 'anger', 'disgust'}",
+          "details": {
+            "scenario_id": 37,
+            "subtype": "deflection-misdirection",
+            "emotions": [
+              "anticipation",
+              "anger",
+              "disgust"
+            ],
+            "unique_emotions": [
+              "anticipation",
+              "anger",
+              "disgust"
+            ],
+            "by_annotator": {
+              "anne_duncan": "anticipation",
+              "tiffanie": "anger",
+              "kirill": "disgust"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Valence (-0.7) unusual for 'anticipation' (expected (0.0, 0.7))",
+          "details": {
+            "scenario_id": 37,
+            "annotator": "anne_duncan",
+            "emotion": "anticipation",
+            "dimension": "valence",
+            "value": -0.67,
+            "expected_range": [
+              0.0,
+              0.7
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.7) unusual for 'anticipation' (expected (-0.2, 0.6))",
+          "details": {
+            "scenario_id": 37,
+            "annotator": "anne_duncan",
+            "emotion": "anticipation",
+            "dimension": "dominance",
+            "value": -0.67,
+            "expected_range": [
+              -0.2,
+              0.6
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: A professor asks why their colleague skipped an important event they were expected to attend together.\nSpeaker (colleague) \u2192 Listener (professor):\n\"I wouldn't say 'skipped' so much as 'jumped' - know what I mean?\"",
+      "annotations_summary": {
+        "emotions": [
+          "anticipation",
+          "anger",
+          "disgust"
+        ],
+        "valence": [
+          "unpleasant",
+          "unpleasant",
+          "unpleasant"
+        ],
+        "arousal": [
+          "neutral",
+          "slightly excited",
+          "slightly excited"
+        ],
+        "dominance": [
+          "controlled",
+          "slightly in control",
+          "neutral"
+        ],
+        "confidence": [
+          "mildly confident",
+          "confident",
+          "mildly confident"
+        ],
+        "annotators": [
+          "anne_duncan",
+          "tiffanie",
+          "kirill"
+        ]
+      }
+    },
+    {
+      "scenario_id": 51,
+      "task_id": 1448,
+      "subtype": "mixed-signals",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-16_anna-mixed-signals_at-2025-12-08-04-24-2841df6f.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-18_abhigya-mixed-signals_at-2025-12-08-03-01-59e2979a.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-17-peter-mixed-signals_at-2025-12-07-19-41-54b48278.json"
+      ],
+      "quality_score": 0.7255,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 0.33,
+      "plausibility_score": 1.0,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 2,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 51,
+            "field": "sl_confidence",
+            "value": "unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'surprise', 'sadness', 'anger'}",
+          "details": {
+            "scenario_id": 51,
+            "subtype": "mixed-signals",
+            "emotions": [
+              "surprise",
+              "anger",
+              "sadness"
+            ],
+            "unique_emotions": [
+              "surprise",
+              "sadness",
+              "anger"
+            ],
+            "by_annotator": {
+              "anna": "surprise",
+              "peter": "anger",
+              "abhigya": "sadness"
+            }
+          }
+        }
+      ],
+      "scenario_text": "Situation: You've been checking in with a friend all week about their horrible dating experiences. They text you late one night after a terrible date. You've offered help before but have started to feel worn out by repeating yourself.\nSpeaker (you) \u2192 Listener (friend):\n\"Can't talk right now. Check my previous text advice. And don't go changing for anyone.\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "anger",
+          "sadness"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "mildly unpleasant",
+          "very unpleasant"
+        ],
+        "arousal": [
+          "slightly excited",
+          "slightly excited",
+          "calm"
+        ],
+        "dominance": [
+          "slightly in control",
+          "neutral",
+          "controlled"
+        ],
+        "confidence": [
+          "neutral",
+          "confident",
+          "unsure"
+        ],
+        "annotators": [
+          "anna",
+          "peter",
+          "abhigya"
+        ]
+      }
+    },
+    {
+      "scenario_id": 28,
+      "task_id": 911,
+      "subtype": "strategic-politeness",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-26_wisdom-strategic-politeness_-at-2025-12-07-13-35-7dd50846.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-25_morty-strategic-politeness-at-2025-12-08-01-18-4ed42e46.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-27_mous-strategic-politeness_at-2025-12-08-07-02-14829172.json"
+      ],
+      "quality_score": 0.7255,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 0.33,
+      "plausibility_score": 1.0,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 4,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_suspicious_lead_time",
+          "flag_stage": "1B",
+          "severity": "info",
+          "message": "Unusually slow annotation: 1091s (18.2 min)",
+          "details": {
+            "scenario_id": 28,
+            "lead_time": 1091.083,
+            "threshold": 600.0,
+            "type": "unusually_slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 1091.1s (z=27.76)",
+          "details": {
+            "scenario_id": 28,
+            "lead_time": 1091.083,
+            "median_time": 62.36,
+            "mad": 24.99,
+            "modified_z_score": 27.76,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'sadness', 'joy', 'trust'}",
+          "details": {
+            "scenario_id": 28,
+            "subtype": "strategic-politeness",
+            "emotions": [
+              "joy",
+              "trust",
+              "sadness"
+            ],
+            "unique_emotions": [
+              "sadness",
+              "joy",
+              "trust"
+            ],
+            "by_annotator": {
+              "morty": "joy",
+              "wisdom": "trust",
+              "mous": "sadness"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate valence disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 28,
+            "dimension": "valence",
+            "values": [
+              0.0,
+              0.67,
+              -0.67
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        }
+      ],
+      "scenario_text": "Situation: A father is responding to his adult child who just told him they didn't get a promotion they interviewed for; they're speaking over the phone.\nSpeaker (father) \u2192 Listener (adult child):\n\"This one probably wasn't the right fit, but I'm proud of how you put yourself out there.\"",
+      "annotations_summary": {
+        "emotions": [
+          "joy",
+          "trust",
+          "sadness"
+        ],
+        "valence": [
+          "neutral",
+          "pleasant",
+          "unpleasant"
+        ],
+        "arousal": [
+          "neutral",
+          "slightly calm",
+          "slightly calm"
+        ],
+        "dominance": [
+          "neutral",
+          "neutral",
+          "slightly controlled"
+        ],
+        "confidence": [
+          "mildly confident",
+          "confident",
+          "mildly confident"
+        ],
+        "annotators": [
+          "morty",
+          "wisdom",
+          "mous"
+        ]
+      }
+    },
+    {
+      "scenario_id": 21,
+      "task_id": 1742,
+      "subtype": "deflection-misdirection",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-14_tiffanie-deflection-misdirection_-at-2025-12-07-22-50-c8d43bb7.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-15_kirill-deflection-misdirection_at-2025-12-07-13-33-d7c44bd6.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-13_anne-duncan-deflection-misdirection_-at-2025-12-07-21-15-b32f81aa.json"
+      ],
+      "quality_score": 0.7255,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.95,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.85,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "No majority emotion agreement"
+      ],
+      "issue_count": 6,
+      "critical_count": 0,
+      "major_count": 1,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "minor",
+          "message": "Dwell time outlier (slow): 56.6s (z=3.39)",
+          "details": {
+            "scenario_id": 21,
+            "lead_time": 56.638000000000005,
+            "median_time": 24.23,
+            "mad": 6.44,
+            "modified_z_score": 3.39,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'sadness', 'fear', 'disgust'}",
+          "details": {
+            "scenario_id": 21,
+            "subtype": "deflection-misdirection",
+            "emotions": [
+              "disgust",
+              "sadness",
+              "fear"
+            ],
+            "unique_emotions": [
+              "sadness",
+              "fear",
+              "disgust"
+            ],
+            "by_annotator": {
+              "anne_duncan": "disgust",
+              "tiffanie": "sadness",
+              "kirill": "fear"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate dominance disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 21,
+            "dimension": "dominance",
+            "values": [
+              -0.67,
+              -0.67,
+              0.67
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.7) unusual for 'disgust' (expected (-0.3, 0.6))",
+          "details": {
+            "scenario_id": 21,
+            "annotator": "anne_duncan",
+            "emotion": "disgust",
+            "dimension": "arousal",
+            "value": -0.67,
+            "expected_range": [
+              -0.3,
+              0.6
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.7) unusual for 'disgust' (expected (0.0, 0.8))",
+          "details": {
+            "scenario_id": 21,
+            "annotator": "anne_duncan",
+            "emotion": "disgust",
+            "dimension": "dominance",
+            "value": -0.67,
+            "expected_range": [
+              0.0,
+              0.8
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (0.7) unusual for 'fear' (expected (-1.0, -0.1))",
+          "details": {
+            "scenario_id": 21,
+            "annotator": "kirill",
+            "emotion": "fear",
+            "dimension": "dominance",
+            "value": 0.67,
+            "expected_range": [
+              -1.0,
+              -0.1
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: At a quiet family dinner, your younger sibling asks if you told Mom and Dad about losing your job earlier this month.\nSpeaker (older sibling) \u2192 Listener (younger sibling):\n\"Oh wow\u00e2 remember when Dad burned the Thanksgiving turkey and we all pretended it was 'extra crispy'?\"",
+      "annotations_summary": {
+        "emotions": [
+          "disgust",
+          "sadness",
+          "fear"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "mildly unpleasant",
+          "mildly pleasant"
+        ],
+        "arousal": [
+          "calm",
+          "calm",
+          "slightly excited"
+        ],
+        "dominance": [
+          "controlled",
+          "controlled",
+          "in control"
+        ],
+        "confidence": [
+          "mildly confident",
+          "very confident",
+          "mildly confident"
+        ],
+        "annotators": [
+          "anne_duncan",
+          "tiffanie",
+          "kirill"
+        ]
+      }
+    },
+    {
+      "scenario_id": 46,
+      "task_id": 1750,
+      "subtype": "deflection-misdirection",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-14_tiffanie-deflection-misdirection_-at-2025-12-07-22-50-c8d43bb7.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-15_kirill-deflection-misdirection_at-2025-12-07-13-33-d7c44bd6.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-13_anne-duncan-deflection-misdirection_-at-2025-12-07-21-15-b32f81aa.json"
+      ],
+      "quality_score": 0.7255,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 0.33,
+      "plausibility_score": 1.0,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "2 major issues",
+        "No majority emotion agreement"
+      ],
+      "issue_count": 3,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 69.7s (z=4.76)",
+          "details": {
+            "scenario_id": 46,
+            "lead_time": 69.746,
+            "median_time": 24.23,
+            "mad": 6.44,
+            "modified_z_score": 4.76,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anticipation', 'joy', 'trust'}",
+          "details": {
+            "scenario_id": 46,
+            "subtype": "deflection-misdirection",
+            "emotions": [
+              "anticipation",
+              "trust",
+              "joy"
+            ],
+            "unique_emotions": [
+              "anticipation",
+              "joy",
+              "trust"
+            ],
+            "by_annotator": {
+              "anne_duncan": "anticipation",
+              "tiffanie": "trust",
+              "kirill": "joy"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate dominance disagreement (range=1.33)",
+          "details": {
+            "scenario_id": 46,
+            "dimension": "dominance",
+            "values": [
+              0.67,
+              -0.33,
+              1.0
+            ],
+            "range": 1.33,
+            "threshold": 1.0
+          }
+        }
+      ],
+      "scenario_text": "Situation: After their first date the younger partner texts that they felt hurt the older man didn't call the next day; the older partner (more socially experienced) replies in a bright, planning tone.\nSpeaker (more experienced man) \u2192 Listener (less experienced partner):\n\"I'm so terrible with my phone lately, but you know what they say \"bigger plans take more time.\"\"",
+      "annotations_summary": {
+        "emotions": [
+          "anticipation",
+          "trust",
+          "joy"
+        ],
+        "valence": [
+          "mildly pleasant",
+          "mildly pleasant",
+          "very pleasant"
+        ],
+        "arousal": [
+          "neutral",
+          "neutral",
+          "excited"
+        ],
+        "dominance": [
+          "in control",
+          "slightly controlled",
+          "very in control"
+        ],
+        "confidence": [
+          "mildly confident",
+          "very confident",
+          "very confident"
+        ],
+        "annotators": [
+          "anne_duncan",
+          "tiffanie",
+          "kirill"
+        ]
+      }
+    },
+    {
+      "scenario_id": 21,
+      "task_id": 906,
+      "subtype": "strategic-politeness",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-26_wisdom-strategic-politeness_-at-2025-12-07-13-35-7dd50846.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-25_morty-strategic-politeness-at-2025-12-08-01-18-4ed42e46.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-27_mous-strategic-politeness_at-2025-12-08-07-02-14829172.json"
+      ],
+      "quality_score": 0.7455,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.9,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "No majority emotion agreement"
+      ],
+      "issue_count": 3,
+      "critical_count": 0,
+      "major_count": 1,
+      "issues": [
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anticipation', 'anger', 'sadness'}",
+          "details": {
+            "scenario_id": 21,
+            "subtype": "strategic-politeness",
+            "emotions": [
+              "anger",
+              "sadness",
+              "anticipation"
+            ],
+            "unique_emotions": [
+              "anticipation",
+              "anger",
+              "sadness"
+            ],
+            "by_annotator": {
+              "morty": "anger",
+              "wisdom": "sadness",
+              "mous": "anticipation"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.3) unusual for 'anger' (expected (0.3, 1.0))",
+          "details": {
+            "scenario_id": 21,
+            "annotator": "morty",
+            "emotion": "anger",
+            "dimension": "arousal",
+            "value": -0.33,
+            "expected_range": [
+              0.3,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (0.7) unusual for 'sadness' (expected (-1.0, -0.1))",
+          "details": {
+            "scenario_id": 21,
+            "annotator": "wisdom",
+            "emotion": "sadness",
+            "dimension": "dominance",
+            "value": 0.67,
+            "expected_range": [
+              -1.0,
+              -0.1
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: You share a small apartment with a friend. Your roommate has been late doing dishes and leaving food on the counter for several days. After a long shift you come home to another mess and speak up.\nSpeaker (you) \u2192 Listener (roommate):\n\"Hey, I know you've been swamped lately. Thanks for picking up last week, but  could you try to stay on top of the dishes this week? \"",
+      "annotations_summary": {
+        "emotions": [
+          "anger",
+          "sadness",
+          "anticipation"
+        ],
+        "valence": [
+          "neutral",
+          "mildly unpleasant",
+          "neutral"
+        ],
+        "arousal": [
+          "slightly calm",
+          "neutral",
+          "neutral"
+        ],
+        "dominance": [
+          "slightly in control",
+          "in control",
+          "neutral"
+        ],
+        "confidence": [
+          "mildly confident",
+          "confident",
+          "neutral"
+        ],
+        "annotators": [
+          "morty",
+          "wisdom",
+          "mous"
+        ]
+      }
+    },
+    {
+      "scenario_id": 40,
+      "task_id": 1269,
+      "subtype": "passive-aggression",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-28_adrian-passive-aggression_-at-2025-12-07-21-14-9d7f54cc.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-21_godwin-passive-aggression_at-2025-12-07-13-34-9f9dfd99.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-20_eli-passive-aggression_at-2025-12-08-01-16-d6ab1c16.json"
+      ],
+      "quality_score": 0.7455,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.9,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "No majority emotion agreement"
+      ],
+      "issue_count": 3,
+      "critical_count": 0,
+      "major_count": 1,
+      "issues": [
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anticipation', 'surprise', 'sadness'}",
+          "details": {
+            "scenario_id": 40,
+            "subtype": "passive-aggression",
+            "emotions": [
+              "surprise",
+              "sadness",
+              "anticipation"
+            ],
+            "unique_emotions": [
+              "anticipation",
+              "surprise",
+              "sadness"
+            ],
+            "by_annotator": {
+              "eli": "surprise",
+              "godwin": "sadness",
+              "adrian": "anticipation"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.3) unusual for 'surprise' (expected (0.3, 1.0))",
+          "details": {
+            "scenario_id": 40,
+            "annotator": "eli",
+            "emotion": "surprise",
+            "dimension": "arousal",
+            "value": -0.33,
+            "expected_range": [
+              0.3,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.3) unusual for 'anticipation' (expected (0.0, 0.7))",
+          "details": {
+            "scenario_id": 40,
+            "annotator": "adrian",
+            "emotion": "anticipation",
+            "dimension": "arousal",
+            "value": -0.33,
+            "expected_range": [
+              0.0,
+              0.7
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: You and a friend have been organizing a small get-together. Your friend promised to bring pastries but forgot and messaged last-minute. You've been handling most logistics lately and are quietly frustrated but don't want a full argument before guests arrive.\nSpeaker (you) \u2192 Listener (friend):\n\"Don't worry about the pastries, I can just take care of it with everything else.\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "sadness",
+          "anticipation"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "unpleasant",
+          "mildly unpleasant"
+        ],
+        "arousal": [
+          "slightly calm",
+          "slightly calm",
+          "slightly calm"
+        ],
+        "dominance": [
+          "slightly controlled",
+          "slightly controlled",
+          "slightly controlled"
+        ],
+        "confidence": [
+          "mildly confident",
+          "confident",
+          "confident"
+        ],
+        "annotators": [
+          "eli",
+          "godwin",
+          "adrian"
+        ]
+      }
+    },
+    {
+      "scenario_id": 33,
+      "task_id": 1744,
+      "subtype": "deflection-misdirection",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-14_tiffanie-deflection-misdirection_-at-2025-12-07-22-50-c8d43bb7.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-15_kirill-deflection-misdirection_at-2025-12-07-13-33-d7c44bd6.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-13_anne-duncan-deflection-misdirection_-at-2025-12-07-21-15-b32f81aa.json"
+      ],
+      "quality_score": 0.7455,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.95,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.95,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "No majority emotion agreement"
+      ],
+      "issue_count": 4,
+      "critical_count": 0,
+      "major_count": 1,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "minor",
+          "message": "Dwell time outlier (slow): 50.3s (z=2.72)",
+          "details": {
+            "scenario_id": 33,
+            "lead_time": 50.255,
+            "median_time": 24.23,
+            "mad": 6.44,
+            "modified_z_score": 2.72,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'joy', 'sadness', 'disgust'}",
+          "details": {
+            "scenario_id": 33,
+            "subtype": "deflection-misdirection",
+            "emotions": [
+              "sadness",
+              "joy",
+              "disgust"
+            ],
+            "unique_emotions": [
+              "joy",
+              "sadness",
+              "disgust"
+            ],
+            "by_annotator": {
+              "anne_duncan": "sadness",
+              "tiffanie": "joy",
+              "kirill": "disgust"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate valence disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 33,
+            "dimension": "valence",
+            "values": [
+              -0.67,
+              0.67,
+              -0.67
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (0.3) unusual for 'sadness' (expected (-1.0, -0.1))",
+          "details": {
+            "scenario_id": 33,
+            "annotator": "anne_duncan",
+            "emotion": "sadness",
+            "dimension": "dominance",
+            "value": 0.33,
+            "expected_range": [
+              -1.0,
+              -0.1
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: During a weekend visit, a mother asks her adult son why he still hasn't transferred his share of the rent after several reminders.\nSpeaker (adult son) \u2192 Listener (mother):\n\"Yeah, about that Mom, thank a load to help me out with a place to crash after my last eviction.\"",
+      "annotations_summary": {
+        "emotions": [
+          "sadness",
+          "joy",
+          "disgust"
+        ],
+        "valence": [
+          "unpleasant",
+          "pleasant",
+          "unpleasant"
+        ],
+        "arousal": [
+          "neutral",
+          "excited",
+          "slightly excited"
+        ],
+        "dominance": [
+          "slightly in control",
+          "in control",
+          "slightly in control"
+        ],
+        "confidence": [
+          "neutral",
+          "confident",
+          "mildly confident"
+        ],
+        "annotators": [
+          "anne_duncan",
+          "tiffanie",
+          "kirill"
+        ]
+      }
+    },
+    {
+      "scenario_id": 22,
+      "task_id": 1208,
+      "subtype": "sarcasm-irony",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-23_andre-sarcasm-irony-at-2025-12-07-19-40-cc032f45.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-24_gwen-sarcasm-irony_at-2025-12-08-04-19-de07973b.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-22_hannah-sarcasm-irony_at-2025-12-08-04-22-3c746407.json"
+      ],
+      "quality_score": 0.7555,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.95,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "No majority emotion agreement"
+      ],
+      "issue_count": 3,
+      "critical_count": 0,
+      "major_count": 1,
+      "issues": [
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anticipation', 'surprise', 'fear'}",
+          "details": {
+            "scenario_id": 22,
+            "subtype": "sarcasm-irony",
+            "emotions": [
+              "surprise",
+              "fear",
+              "anticipation"
+            ],
+            "unique_emotions": [
+              "anticipation",
+              "surprise",
+              "fear"
+            ],
+            "by_annotator": {
+              "hannah": "surprise",
+              "andre": "fear",
+              "gwen": "anticipation"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate arousal disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 22,
+            "dimension": "arousal",
+            "values": [
+              0.33,
+              0.67,
+              -0.67
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.7) unusual for 'anticipation' (expected (0.0, 0.7))",
+          "details": {
+            "scenario_id": 22,
+            "annotator": "gwen",
+            "emotion": "anticipation",
+            "dimension": "arousal",
+            "value": -0.67,
+            "expected_range": [
+              0.0,
+              0.7
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: You lent your car to your younger sister. The younger sister returned it with a large, obvious dent. You are in the driveway, looking at the damage.\nSpeaker (you) \u2192 Listener (younger sister):\n\"I like the new aerodynmic curves you added to the passenger doors.\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "fear",
+          "anticipation"
+        ],
+        "valence": [
+          "neutral",
+          "unpleasant",
+          "mildly pleasant"
+        ],
+        "arousal": [
+          "slightly excited",
+          "excited",
+          "calm"
+        ],
+        "dominance": [
+          "slightly in control",
+          "slightly controlled",
+          "neutral"
+        ],
+        "confidence": [
+          "confident",
+          "confident",
+          "mildly confident"
+        ],
+        "annotators": [
+          "hannah",
+          "andre",
+          "gwen"
+        ]
+      }
+    },
+    {
+      "scenario_id": 43,
+      "task_id": 1749,
+      "subtype": "deflection-misdirection",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-14_tiffanie-deflection-misdirection_-at-2025-12-07-22-50-c8d43bb7.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-15_kirill-deflection-misdirection_at-2025-12-07-13-33-d7c44bd6.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-13_anne-duncan-deflection-misdirection_-at-2025-12-07-21-15-b32f81aa.json"
+      ],
+      "quality_score": 0.7555,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 0.33,
+      "plausibility_score": 0.95,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "No majority emotion agreement"
+      ],
+      "issue_count": 3,
+      "critical_count": 0,
+      "major_count": 1,
+      "issues": [
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'surprise', 'disgust', 'anger'}",
+          "details": {
+            "scenario_id": 43,
+            "subtype": "deflection-misdirection",
+            "emotions": [
+              "surprise",
+              "disgust",
+              "anger"
+            ],
+            "unique_emotions": [
+              "surprise",
+              "disgust",
+              "anger"
+            ],
+            "by_annotator": {
+              "anne_duncan": "surprise",
+              "tiffanie": "disgust",
+              "kirill": "anger"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate dominance disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 43,
+            "dimension": "dominance",
+            "values": [
+              0.67,
+              -0.67,
+              0.67
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.7) unusual for 'disgust' (expected (0.0, 0.8))",
+          "details": {
+            "scenario_id": 43,
+            "annotator": "tiffanie",
+            "emotion": "disgust",
+            "dimension": "dominance",
+            "value": -0.67,
+            "expected_range": [
+              0.0,
+              0.8
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: On a walk, a younger ex asks their older ex whether they'd ever consider getting back together; the conversation feels tense and the question is direct.\nSpeaker (older ex partner) \u2192 Listener (younger ex partner):\n\"Did we ever really break up?\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "disgust",
+          "anger"
+        ],
+        "valence": [
+          "unpleasant",
+          "unpleasant",
+          "unpleasant"
+        ],
+        "arousal": [
+          "slightly excited",
+          "slightly excited",
+          "excited"
+        ],
+        "dominance": [
+          "in control",
+          "controlled",
+          "in control"
+        ],
+        "confidence": [
+          "neutral",
+          "very confident",
+          "very confident"
+        ],
+        "annotators": [
+          "anne_duncan",
+          "tiffanie",
+          "kirill"
+        ]
+      }
+    },
+    {
+      "scenario_id": 23,
+      "task_id": 1444,
+      "subtype": "mixed-signals",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-16_anna-mixed-signals_at-2025-12-08-04-24-2841df6f.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-18_abhigya-mixed-signals_at-2025-12-08-03-01-59e2979a.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-17-peter-mixed-signals_at-2025-12-07-19-41-54b48278.json"
+      ],
+      "quality_score": 0.7655,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 0.33,
+      "plausibility_score": 1.0,
+      "needs_review": true,
+      "review_priority": 9,
+      "review_reasons": [
+        "No majority emotion agreement"
+      ],
+      "issue_count": 1,
+      "critical_count": 0,
+      "major_count": 1,
+      "issues": [
+        {
+          "flag": "1C_no_majority_emotion",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "Complete emotion disagreement: {'anticipation', 'surprise', 'joy'}",
+          "details": {
+            "scenario_id": 23,
+            "subtype": "mixed-signals",
+            "emotions": [
+              "surprise",
+              "joy",
+              "anticipation"
+            ],
+            "unique_emotions": [
+              "anticipation",
+              "surprise",
+              "joy"
+            ],
+            "by_annotator": {
+              "anna": "surprise",
+              "peter": "joy",
+              "abhigya": "anticipation"
+            }
+          }
+        }
+      ],
+      "scenario_text": "Situation: After a fight, your cousin has been distant for weeks and hasn't visited. They send a short message offering you a way back in.\nSpeaker (cousin) \u2192 Listener (you):\n\"If you ever want to come by, the door may be open.\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "joy",
+          "anticipation"
+        ],
+        "valence": [
+          "mildly pleasant",
+          "mildly pleasant",
+          "pleasant"
+        ],
+        "arousal": [
+          "excited",
+          "slightly calm",
+          "neutral"
+        ],
+        "dominance": [
+          "controlled",
+          "neutral",
+          "slightly in control"
+        ],
+        "confidence": [
+          "neutral",
+          "mildly confident",
+          "neutral"
+        ],
+        "annotators": [
+          "anna",
+          "peter",
+          "abhigya"
+        ]
+      }
+    }
+  ],
+  "stratified_sample": [
+    {
+      "scenario_id": 1,
+      "task_id": 1201,
+      "subtype": "sarcasm-irony",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-23_andre-sarcasm-irony-at-2025-12-07-19-40-cc032f45.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-24_gwen-sarcasm-irony_at-2025-12-08-04-19-de07973b.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-22_hannah-sarcasm-irony_at-2025-12-08-04-22-3c746407.json"
+      ],
+      "quality_score": 0.8925,
+      "quality_bucket": "good",
+      "schema_score": 1.0,
+      "consistency_score": 0.6,
+      "agreement_score": 0.95,
+      "plausibility_score": 0.95,
+      "needs_review": true,
+      "review_priority": 7,
+      "review_reasons": [
+        "2 major issues"
+      ],
+      "issue_count": 6,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_suspicious_lead_time",
+          "flag_stage": "1B",
+          "severity": "info",
+          "message": "Unusually slow annotation: 2203s (36.7 min)",
+          "details": {
+            "scenario_id": 1,
+            "lead_time": 2202.653,
+            "threshold": 600.0,
+            "type": "unusually_slow"
+          }
+        },
+        {
+          "flag": "1B_suspicious_lead_time",
+          "flag_stage": "1B",
+          "severity": "info",
+          "message": "Unusually slow annotation: 666s (11.1 min)",
+          "details": {
+            "scenario_id": 1,
+            "lead_time": 665.751,
+            "threshold": 600.0,
+            "type": "unusually_slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 2202.7s (z=91.64)",
+          "details": {
+            "scenario_id": 1,
+            "lead_time": 2202.653,
+            "median_time": 53.74,
+            "mad": 15.82,
+            "modified_z_score": 91.64,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 665.8s (z=57.00)",
+          "details": {
+            "scenario_id": 1,
+            "lead_time": 665.751,
+            "median_time": 39.84,
+            "mad": 7.41,
+            "modified_z_score": 57.0,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate arousal disagreement (range=1.33)",
+          "details": {
+            "scenario_id": 1,
+            "dimension": "arousal",
+            "values": [
+              -1.0,
+              0.0,
+              0.33
+            ],
+            "range": 1.33,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (0.3) unusual for 'sadness' (expected (-1.0, 0.0))",
+          "details": {
+            "scenario_id": 1,
+            "annotator": "gwen",
+            "emotion": "sadness",
+            "dimension": "arousal",
+            "value": 0.33,
+            "expected_range": [
+              -1.0,
+              0.0
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: After the programmer accidentally pushed a code update that reverted most of the day's progress, another teammate sighs and addresses the small group of peers who worked on it together.\nSpeaker (teammate) \u2192 Listener (programmer):\n\"Well, that went... great.\"",
+      "annotations_summary": {
+        "emotions": [
+          "sadness",
+          "sadness",
+          "sadness"
+        ],
+        "valence": [
+          "unpleasant",
+          "mildly unpleasant",
+          "mildly unpleasant"
+        ],
+        "arousal": [
+          "very calm",
+          "neutral",
+          "slightly excited"
+        ],
+        "dominance": [
+          "controlled",
+          "neutral",
+          "controlled"
+        ],
+        "confidence": [
+          "mildly confident",
+          "mildly confident",
+          "confident"
+        ],
+        "annotators": [
+          "hannah",
+          "andre",
+          "gwen"
+        ]
+      }
+    },
+    {
+      "scenario_id": 5,
+      "task_id": 0,
+      "subtype": "sarcasm-irony",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 26,
+      "task_id": 0,
+      "subtype": "sarcasm-irony",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 19,
+      "task_id": 0,
+      "subtype": "mixed-signals",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 17,
+      "task_id": 0,
+      "subtype": "mixed-signals",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 9,
+      "task_id": 0,
+      "subtype": "mixed-signals",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 13,
+      "task_id": 1441,
+      "subtype": "mixed-signals",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-16_anna-mixed-signals_at-2025-12-08-04-24-2841df6f.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-18_abhigya-mixed-signals_at-2025-12-08-03-01-59e2979a.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-17-peter-mixed-signals_at-2025-12-07-19-41-54b48278.json"
+      ],
+      "quality_score": 0.8025,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.2,
+      "agreement_score": 0.95,
+      "plausibility_score": 0.9,
+      "needs_review": true,
+      "review_priority": 7,
+      "review_reasons": [
+        "4 major issues"
+      ],
+      "issue_count": 7,
+      "critical_count": 0,
+      "major_count": 4,
+      "issues": [
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'mildly unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 13,
+            "field": "sl_confidence",
+            "value": "mildly unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 399.7s (z=16.70)",
+          "details": {
+            "scenario_id": 13,
+            "lead_time": 399.74300000000005,
+            "median_time": 69.1,
+            "mad": 13.36,
+            "modified_z_score": 16.7,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 264.8s (z=11.54)",
+          "details": {
+            "scenario_id": 13,
+            "lead_time": 264.815,
+            "median_time": 45.94,
+            "mad": 12.79,
+            "modified_z_score": 11.54,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 390.0s (z=12.88)",
+          "details": {
+            "scenario_id": 13,
+            "lead_time": 390.017,
+            "median_time": 58.32,
+            "mad": 17.38,
+            "modified_z_score": 12.88,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate dominance disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 13,
+            "dimension": "dominance",
+            "values": [
+              -0.67,
+              0.67,
+              0.33
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (0.7) unusual for 'trust' (expected (-0.6, 0.3))",
+          "details": {
+            "scenario_id": 13,
+            "annotator": "anna",
+            "emotion": "trust",
+            "dimension": "arousal",
+            "value": 0.67,
+            "expected_range": [
+              -0.6,
+              0.3
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.7) unusual for 'trust' (expected (-0.3, 0.6))",
+          "details": {
+            "scenario_id": 13,
+            "annotator": "anna",
+            "emotion": "trust",
+            "dimension": "dominance",
+            "value": -0.67,
+            "expected_range": [
+              -0.3,
+              0.6
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: After you stayed late helping to prepare materials assigned to you at the last minute. Your manager skims them quickly and replies with a curt comment about timing. You respond the next morning.\nSpeaker (you) \u2192 Listener (manager):\n\"Next time, please give me a bit more notice.\"",
+      "annotations_summary": {
+        "emotions": [
+          "trust",
+          "trust",
+          "anger"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "mildly pleasant",
+          "unpleasant"
+        ],
+        "arousal": [
+          "excited",
+          "slightly calm",
+          "slightly excited"
+        ],
+        "dominance": [
+          "controlled",
+          "in control",
+          "slightly in control"
+        ],
+        "confidence": [
+          "mildly unsure",
+          "mildly confident",
+          "confident"
+        ],
+        "annotators": [
+          "anna",
+          "peter",
+          "abhigya"
+        ]
+      }
+    },
+    {
+      "scenario_id": 54,
+      "task_id": 1450,
+      "subtype": "mixed-signals",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-16_anna-mixed-signals_at-2025-12-08-04-24-2841df6f.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-18_abhigya-mixed-signals_at-2025-12-08-03-01-59e2979a.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-17-peter-mixed-signals_at-2025-12-07-19-41-54b48278.json"
+      ],
+      "quality_score": 0.94,
+      "quality_bucket": "good",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 1.0,
+      "plausibility_score": 0.9,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 3,
+      "critical_count": 0,
+      "major_count": 1,
+      "issues": [
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'mildly unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 54,
+            "field": "sl_confidence",
+            "value": "mildly unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.3) unusual for 'anger' (expected (0.2, 1.0))",
+          "details": {
+            "scenario_id": 54,
+            "annotator": "anna",
+            "emotion": "anger",
+            "dimension": "dominance",
+            "value": -0.33,
+            "expected_range": [
+              0.2,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.7) unusual for 'anger' (expected (0.2, 1.0))",
+          "details": {
+            "scenario_id": 54,
+            "annotator": "abhigya",
+            "emotion": "anger",
+            "dimension": "dominance",
+            "value": -0.67,
+            "expected_range": [
+              0.2,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: On Slack a teammate sends a private late-night message after you missed a minor deadline. Earlier that day they'd been terse in the thread and haven't offered help.\nSpeaker (teammate) \u2192 Listener (you):\n\"I'm happy to help, but you've got to learn how to fix these types of problems by yourself.\"",
+      "annotations_summary": {
+        "emotions": [
+          "anger",
+          "fear",
+          "anger"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "mildly unpleasant",
+          "unpleasant"
+        ],
+        "arousal": [
+          "slightly excited",
+          "slightly excited",
+          "slightly excited"
+        ],
+        "dominance": [
+          "slightly controlled",
+          "slightly controlled",
+          "controlled"
+        ],
+        "confidence": [
+          "neutral",
+          "mildly confident",
+          "mildly unsure"
+        ],
+        "annotators": [
+          "anna",
+          "peter",
+          "abhigya"
+        ]
+      }
+    },
+    {
+      "scenario_id": 45,
+      "task_id": 0,
+      "subtype": "strategic-politeness",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 4,
+      "task_id": 0,
+      "subtype": "strategic-politeness",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 2,
+      "task_id": 901,
+      "subtype": "strategic-politeness",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-26_wisdom-strategic-politeness_-at-2025-12-07-13-35-7dd50846.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-25_morty-strategic-politeness-at-2025-12-08-01-18-4ed42e46.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-27_mous-strategic-politeness_at-2025-12-08-07-02-14829172.json"
+      ],
+      "quality_score": 0.94,
+      "quality_bucket": "good",
+      "schema_score": 1.0,
+      "consistency_score": 0.8,
+      "agreement_score": 1.0,
+      "plausibility_score": 0.9,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 3,
+      "critical_count": 0,
+      "major_count": 1,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 168.7s (z=7.13)",
+          "details": {
+            "scenario_id": 2,
+            "lead_time": 168.678,
+            "median_time": 38.99,
+            "mad": 12.27,
+            "modified_z_score": 7.13,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (0.7) unusual for 'sadness' (expected (-1.0, -0.1))",
+          "details": {
+            "scenario_id": 2,
+            "annotator": "morty",
+            "emotion": "sadness",
+            "dimension": "dominance",
+            "value": 0.67,
+            "expected_range": [
+              -1.0,
+              -0.1
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (0.7) unusual for 'sadness' (expected (-1.0, -0.1))",
+          "details": {
+            "scenario_id": 2,
+            "annotator": "mous",
+            "emotion": "sadness",
+            "dimension": "dominance",
+            "value": 0.67,
+            "expected_range": [
+              -1.0,
+              -0.1
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: A teammate asks you last-minute to take on part of their workload for the upcoming project. You respond in your team chat.\nSpeaker (you) \u2192 Listener (teammate):\n\"I love that you asked, but I'm going to pass on taking this. I don't have the bandwidth this quarter, but thanks for thinking of me.\"",
+      "annotations_summary": {
+        "emotions": [
+          "sadness",
+          "sadness",
+          "sadness"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "unpleasant",
+          "mildly unpleasant"
+        ],
+        "arousal": [
+          "calm",
+          "slightly calm",
+          "slightly calm"
+        ],
+        "dominance": [
+          "in control",
+          "neutral",
+          "in control"
+        ],
+        "confidence": [
+          "mildly confident",
+          "mildly confident",
+          "mildly confident"
+        ],
+        "annotators": [
+          "morty",
+          "wisdom",
+          "mous"
+        ]
+      }
+    },
+    {
+      "scenario_id": 6,
+      "task_id": 0,
+      "subtype": "passive-aggression",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 14,
+      "task_id": 0,
+      "subtype": "passive-aggression",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 16,
+      "task_id": 0,
+      "subtype": "passive-aggression",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 17,
+      "task_id": 1262,
+      "subtype": "passive-aggression",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-28_adrian-passive-aggression_-at-2025-12-07-21-14-9d7f54cc.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-21_godwin-passive-aggression_at-2025-12-07-13-34-9f9dfd99.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-20_eli-passive-aggression_at-2025-12-08-01-16-d6ab1c16.json"
+      ],
+      "quality_score": 0.91,
+      "quality_bucket": "good",
+      "schema_score": 1.0,
+      "consistency_score": 0.55,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": true,
+      "review_priority": 7,
+      "review_reasons": [
+        "2 major issues"
+      ],
+      "issue_count": 3,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'mildly unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 17,
+            "field": "sl_confidence",
+            "value": "mildly unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "minor",
+          "message": "Dwell time outlier (slow): 147.3s (z=3.52)",
+          "details": {
+            "scenario_id": 17,
+            "lead_time": 147.27,
+            "median_time": 58.95,
+            "mad": 16.94,
+            "modified_z_score": 3.52,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 254.7s (z=3.93)",
+          "details": {
+            "scenario_id": 17,
+            "lead_time": 254.727,
+            "median_time": 62.59,
+            "mad": 33.02,
+            "modified_z_score": 3.93,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        }
+      ],
+      "scenario_text": "Situation: A junior analyst posts a reply in a team thread after a senior analyst provided detailed critiques and requested last-minute changes to a report that was already reviewed. The team has a history of late edits from that senior analyst.\nSpeaker (junior analyst) \u2192 Listener (senior analyst):\n\"Thanks for the notes, I'll make the edits, and hopefully next time we can avoid so many last-minute changes.\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "anger",
+          "surprise"
+        ],
+        "valence": [
+          "unpleasant",
+          "mildly unpleasant",
+          "mildly unpleasant"
+        ],
+        "arousal": [
+          "neutral",
+          "neutral",
+          "neutral"
+        ],
+        "dominance": [
+          "in control",
+          "slightly in control",
+          "in control"
+        ],
+        "confidence": [
+          "mildly unsure",
+          "mildly confident",
+          "confident"
+        ],
+        "annotators": [
+          "eli",
+          "godwin",
+          "adrian"
+        ]
+      }
+    },
+    {
+      "scenario_id": 1,
+      "task_id": 1741,
+      "subtype": "deflection-misdirection",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-14_tiffanie-deflection-misdirection_-at-2025-12-07-22-50-c8d43bb7.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-15_kirill-deflection-misdirection_at-2025-12-07-13-33-d7c44bd6.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-13_anne-duncan-deflection-misdirection_-at-2025-12-07-21-15-b32f81aa.json"
+      ],
+      "quality_score": 0.8025,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.2,
+      "agreement_score": 0.95,
+      "plausibility_score": 0.9,
+      "needs_review": true,
+      "review_priority": 7,
+      "review_reasons": [
+        "4 major issues"
+      ],
+      "issue_count": 8,
+      "critical_count": 0,
+      "major_count": 4,
+      "issues": [
+        {
+          "flag": "1B_suspicious_lead_time",
+          "flag_stage": "1B",
+          "severity": "info",
+          "message": "Unusually slow annotation: 893s (14.9 min)",
+          "details": {
+            "scenario_id": 1,
+            "lead_time": 893.055,
+            "threshold": 600.0,
+            "type": "unusually_slow"
+          }
+        },
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'very unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 1,
+            "field": "sl_confidence",
+            "value": "very unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 893.1s (z=8.35)",
+          "details": {
+            "scenario_id": 1,
+            "lead_time": 893.055,
+            "median_time": 163.23,
+            "mad": 58.95,
+            "modified_z_score": 8.35,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 516.1s (z=51.48)",
+          "details": {
+            "scenario_id": 1,
+            "lead_time": 516.057,
+            "median_time": 24.23,
+            "mad": 6.44,
+            "modified_z_score": 51.48,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 152.7s (z=24.46)",
+          "details": {
+            "scenario_id": 1,
+            "lead_time": 152.708,
+            "median_time": 24.49,
+            "mad": 3.54,
+            "modified_z_score": 24.46,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "minor",
+          "message": "Moderate arousal disagreement (range=1.34)",
+          "details": {
+            "scenario_id": 1,
+            "dimension": "arousal",
+            "values": [
+              0.67,
+              -0.33,
+              -0.67
+            ],
+            "range": 1.34,
+            "threshold": 1.0
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.3) unusual for 'anger' (expected (0.3, 1.0))",
+          "details": {
+            "scenario_id": 1,
+            "annotator": "tiffanie",
+            "emotion": "anger",
+            "dimension": "arousal",
+            "value": -0.33,
+            "expected_range": [
+              0.3,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.7) unusual for 'surprise' (expected (0.3, 1.0))",
+          "details": {
+            "scenario_id": 1,
+            "annotator": "kirill",
+            "emotion": "surprise",
+            "dimension": "arousal",
+            "value": -0.67,
+            "expected_range": [
+              0.3,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: In the office kitchen, one colleague brings up that Jamie's slides skipped several key data points and asks if Jamie can explain.\nSpeaker (Jaime) \u2192 Listener (peer):\n\"No worries, I've brought donuts for everyone, let's all grab one! Also, who's up for moving the Friday coffee run to earlier?\"",
+      "annotations_summary": {
+        "emotions": [
+          "surprise",
+          "anger",
+          "surprise"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "mildly unpleasant",
+          "unpleasant"
+        ],
+        "arousal": [
+          "excited",
+          "slightly calm",
+          "calm"
+        ],
+        "dominance": [
+          "controlled",
+          "slightly in control",
+          "slightly controlled"
+        ],
+        "confidence": [
+          "mildly confident",
+          "very confident",
+          "very unsure"
+        ],
+        "annotators": [
+          "anne_duncan",
+          "tiffanie",
+          "kirill"
+        ]
+      }
+    },
+    {
+      "scenario_id": 49,
+      "task_id": 1751,
+      "subtype": "deflection-misdirection",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-14_tiffanie-deflection-misdirection_-at-2025-12-07-22-50-c8d43bb7.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-15_kirill-deflection-misdirection_at-2025-12-07-13-33-d7c44bd6.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-13_anne-duncan-deflection-misdirection_-at-2025-12-07-21-15-b32f81aa.json"
+      ],
+      "quality_score": 0.82,
+      "quality_bucket": "acceptable",
+      "schema_score": 1.0,
+      "consistency_score": 0.95,
+      "agreement_score": 0.6,
+      "plausibility_score": 0.85,
+      "needs_review": true,
+      "review_priority": 7,
+      "review_reasons": [
+        "2 major issues"
+      ],
+      "issue_count": 6,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "minor",
+          "message": "Dwell time outlier (slow): 442.2s (z=3.19)",
+          "details": {
+            "scenario_id": 49,
+            "lead_time": 442.229,
+            "median_time": 163.23,
+            "mad": 58.95,
+            "modified_z_score": 3.19,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "High valence disagreement (range=2.00)",
+          "details": {
+            "scenario_id": 49,
+            "dimension": "valence",
+            "field": "sl_v",
+            "values": [
+              -1.0,
+              -1.0,
+              1.0
+            ],
+            "range": 2.0,
+            "threshold": 1.5,
+            "by_annotator": {
+              "anne_duncan": "very unpleasant",
+              "tiffanie": "very unpleasant",
+              "kirill": "very pleasant"
+            }
+          }
+        },
+        {
+          "flag": "1C_high_vad_disagreement",
+          "flag_stage": "1C",
+          "severity": "major",
+          "message": "High arousal disagreement (range=1.67)",
+          "details": {
+            "scenario_id": 49,
+            "dimension": "arousal",
+            "field": "sl_a",
+            "values": [
+              -1.0,
+              0.67,
+              0.33
+            ],
+            "range": 1.67,
+            "threshold": 1.5,
+            "by_annotator": {
+              "anne_duncan": "very calm",
+              "tiffanie": "excited",
+              "kirill": "slightly excited"
+            }
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-1.0) unusual for 'disgust' (expected (-0.3, 0.6))",
+          "details": {
+            "scenario_id": 49,
+            "annotator": "anne_duncan",
+            "emotion": "disgust",
+            "dimension": "arousal",
+            "value": -1.0,
+            "expected_range": [
+              -0.3,
+              0.6
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.3) unusual for 'disgust' (expected (0.0, 0.8))",
+          "details": {
+            "scenario_id": 49,
+            "annotator": "anne_duncan",
+            "emotion": "disgust",
+            "dimension": "dominance",
+            "value": -0.33,
+            "expected_range": [
+              0.0,
+              0.8
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (-0.7) unusual for 'disgust' (expected (0.0, 0.8))",
+          "details": {
+            "scenario_id": 49,
+            "annotator": "tiffanie",
+            "emotion": "disgust",
+            "dimension": "dominance",
+            "value": -0.67,
+            "expected_range": [
+              0.0,
+              0.8
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: After a tense conversation where a woman raises concerns about their partner's emotional availability, the woman pushes for a serious discussion about priorities. The partner responds quickly.\nSpeaker (partner) \u2192 Listener (woman):\n\"Available? 24/7 baby\"",
+      "annotations_summary": {
+        "emotions": [
+          "disgust",
+          "disgust",
+          "joy"
+        ],
+        "valence": [
+          "very unpleasant",
+          "very unpleasant",
+          "very pleasant"
+        ],
+        "arousal": [
+          "very calm",
+          "excited",
+          "slightly excited"
+        ],
+        "dominance": [
+          "slightly controlled",
+          "controlled",
+          "slightly in control"
+        ],
+        "confidence": [
+          "mildly confident",
+          "very confident",
+          "confident"
+        ],
+        "annotators": [
+          "anne_duncan",
+          "tiffanie",
+          "kirill"
+        ]
+      }
+    },
+    {
+      "scenario_id": 17,
+      "task_id": 0,
+      "subtype": "deflection-misdirection",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 41,
+      "task_id": 0,
+      "subtype": "deflection-misdirection",
+      "file_paths": [],
+      "quality_score": 1.0,
+      "quality_bucket": "excellent",
+      "schema_score": 1.0,
+      "consistency_score": 1.0,
+      "agreement_score": 1.0,
+      "plausibility_score": 1.0,
+      "needs_review": false,
+      "review_priority": 0,
+      "review_reasons": [],
+      "issue_count": 0,
+      "critical_count": 0,
+      "major_count": 0,
+      "issues": [],
+      "scenario_text": "",
+      "annotations_summary": {}
+    },
+    {
+      "scenario_id": 55,
+      "task_id": 1753,
+      "subtype": "deflection-misdirection",
+      "file_paths": [
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-14_tiffanie-deflection-misdirection_-at-2025-12-07-22-50-c8d43bb7.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-15_kirill-deflection-misdirection_at-2025-12-07-13-33-d7c44bd6.json",
+        "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-13_anne-duncan-deflection-misdirection_-at-2025-12-07-21-15-b32f81aa.json"
+      ],
+      "quality_score": 0.9,
+      "quality_bucket": "good",
+      "schema_score": 1.0,
+      "consistency_score": 0.6,
+      "agreement_score": 1.0,
+      "plausibility_score": 0.9,
+      "needs_review": true,
+      "review_priority": 7,
+      "review_reasons": [
+        "2 major issues"
+      ],
+      "issue_count": 4,
+      "critical_count": 0,
+      "major_count": 2,
+      "issues": [
+        {
+          "flag": "1B_invalid_label_value",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Unexpected value 'very unsure' for field 'sl_confidence'",
+          "details": {
+            "scenario_id": 55,
+            "field": "sl_confidence",
+            "value": "very unsure",
+            "expected_examples": [
+              "very confident",
+              "confident",
+              "mildly confident",
+              "neutral",
+              "mildly uncertain"
+            ]
+          }
+        },
+        {
+          "flag": "1B_dwell_time_outlier",
+          "flag_stage": "1B",
+          "severity": "major",
+          "message": "Dwell time outlier (slow): 57.9s (z=6.37)",
+          "details": {
+            "scenario_id": 55,
+            "lead_time": 57.884,
+            "median_time": 24.49,
+            "mad": 3.54,
+            "modified_z_score": 6.37,
+            "threshold": 2.5,
+            "direction": "slow"
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Dominance (0.7) unusual for 'sadness' (expected (-1.0, -0.1))",
+          "details": {
+            "scenario_id": 55,
+            "annotator": "anne_duncan",
+            "emotion": "sadness",
+            "dimension": "dominance",
+            "value": 0.67,
+            "expected_range": [
+              -1.0,
+              -0.1
+            ],
+            "tolerance": 0.3
+          }
+        },
+        {
+          "flag": "1D_vad_emotion_mismatch",
+          "flag_stage": "1D",
+          "severity": "minor",
+          "message": "Arousal (-0.3) unusual for 'surprise' (expected (0.3, 1.0))",
+          "details": {
+            "scenario_id": 55,
+            "annotator": "kirill",
+            "emotion": "surprise",
+            "dimension": "arousal",
+            "value": -0.33,
+            "expected_range": [
+              0.3,
+              1.0
+            ],
+            "tolerance": 0.3
+          }
+        }
+      ],
+      "scenario_text": "Situation: A group chat of friends on Messenger where one man recently hinted they were upset after a breakup; a friend asks if they're okay.\nSpeaker (man) \u2192 Listener (friend):\n\"OK? I'm about as sound as the English pound.\"",
+      "annotations_summary": {
+        "emotions": [
+          "sadness",
+          "sadness",
+          "surprise"
+        ],
+        "valence": [
+          "mildly unpleasant",
+          "mildly unpleasant",
+          "mildly unpleasant"
+        ],
+        "arousal": [
+          "calm",
+          "slightly calm",
+          "slightly calm"
+        ],
+        "dominance": [
+          "in control",
+          "neutral",
+          "slightly controlled"
+        ],
+        "confidence": [
+          "mildly confident",
+          "very confident",
+          "very unsure"
+        ],
+        "annotators": [
+          "anne_duncan",
+          "tiffanie",
+          "kirill"
+        ]
+      }
+    }
+  ],
+  "files_requiring_review": [
+    {
+      "file_path": "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini/project-18_abhigya-mixed-signals_at-2025-12-08-03-01-59e2979a.json",
+      "annotator_name": "abhigya",
+      "subtype": "mixed-signals",
+      "record_count": 60,
+      "issue_count": 47,
+      "mean_quality_score": 1.0,
+      "min_quality_score": 1.0,
+      "low_quality_count": 0,
+      "missing_scenarios": [],
+      "duplicate_scenarios": [],
+      "mean_lead_time": 92.29,
+      "suspicious_fast_count": 0,
+      "suspicious_slow_count": 1,
+      "needs_full_review": true,
+      "review_reason": "High issue rate (78.3%)"
+    }
+  ]
+}
