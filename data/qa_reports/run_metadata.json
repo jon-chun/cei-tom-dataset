@@ -6,7 +6,7 @@
   "git_branch": "main",
   "python_version": "3.12.11",
   "package_version": "1.0.0",
-  "data_dir": "/Users/jonc/code/cei-tom-benchmark/input/openai/gpt-5-mini/gold-gpt5mini",
+  "data_dir": "data/",
   "total_files": 15,
   "total_records": 900,
   "llm_enabled": false,
